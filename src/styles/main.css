@@ -8,9 +8,16 @@ body,
   padding: 0;
 }
 
+html {
+  transition: background 0.4s ease-out;
+}
+
 html.dark {
   background: #121212;
 }
+
+
+
 
 #nprogress {
   pointer-events: none;
