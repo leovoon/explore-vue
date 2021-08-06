@@ -13,11 +13,9 @@ html {
 }
 
 html.dark {
-  background: #121212;
+  background: #2E3440;
+
 }
-
-
-
 
 #nprogress {
   pointer-events: none;
@@ -25,7 +23,7 @@ html.dark {
 
 #nprogress .bar {
   @apply bg-teal-600 opacity-75;
-
+  
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -43,8 +41,8 @@ html.dark {
 }
 
 .icon-btn {
-  @apply inline-block cursor-pointer select-none
+  @apply inline-flex cursor-pointer select-none
     opacity-75 transition duration-200 ease-in-out
-    hover:opacity-100 hover:text-teal-600;
+    hover:opacity-100 hover:text-teal-600 item-center justify-center;
   font-size: 0.9em;
 }

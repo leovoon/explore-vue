@@ -3,7 +3,10 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CarbonCampsite: typeof import('virtual:vite-icons/carbon/campsite')['default']
+    'AkarIcons:arrowDownRight': typeof import('virtual:vite-icons/akar-icons/arrow-down-right')['default']
+    'AkarIcons:chevronRight': typeof import('virtual:vite-icons/akar-icons/chevron-right')['default']
+    'AntDesign:caretRightFilled': typeof import('virtual:vite-icons/ant-design/caret-right-filled')['default']
+    'AntDesign:swapRightOutlined': typeof import('virtual:vite-icons/ant-design/swap-right-outlined')['default']
     CarbonDicomOverlay: typeof import('virtual:vite-icons/carbon/dicom-overlay')['default']
     CarbonLanguage: typeof import('virtual:vite-icons/carbon/language')['default']
     CarbonLogoGithub: typeof import('virtual:vite-icons/carbon/logo-github')['default']

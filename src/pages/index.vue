@@ -19,13 +19,23 @@ const { t } = useI18n()
       <whh-roadsignright class="inline-block" />
     </p>
     <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        vueInFreeTime
-      </a>
+      vueInFreeTime
     </p>
     <p>
       <em class="text-sm opacity-75">{{ t('intro.desc') }}</em>
     </p>
+
+    <ul class="flex flex-col list-none my-4 space-y-2">
+      <li class=" cursor-pointer ">
+        <router-link class="icon-btn mx-2 space-x-1" to="/atm-input">
+          <akar-icons:arrow-down-right class="inline-block text-sm" />
+          <span>
+
+            ATM-like Input
+          </span>
+        </router-link>
+      </li>
+    </ul>
 
     <div class="py-4" />
 

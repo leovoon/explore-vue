@@ -8,7 +8,7 @@ title: About
   <h3>About</h3>
 </div>
 
- [Vitesse](https://github.com/antfu/vitesse) [Vite](https://github.com/vitejs/vite) made by [@antfu](https://github.com/antfu). With **file-based routing**, **components auto importing**, **markdown support**, I18n, PWA and uses **WindiCSS** for UI.
+This website is built on top [Vitesse](https://github.com/antfu/vitesse) [Vite](https://github.com/vitejs/vite) made by [@antfu](https://github.com/antfu). With **file-based routing**, **components auto importing**, **markdown support**, I18n, PWA and uses **WindiCSS** for UI.
 
 ```js
 // syntax highlighting example
@@ -19,3 +19,4 @@ function hello() {
 ```
 
 Check out the [GitHub repo](https://github.com/antfu/vitesse) for more details.
+
