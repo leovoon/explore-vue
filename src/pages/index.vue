@@ -27,11 +27,12 @@ const { t } = useI18n()
 
     <ul class="flex flex-col list-none my-4 space-y-2">
       <li class=" cursor-pointer ">
-        <router-link class="icon-btn mx-2 space-x-1" to="/atm-input">
+        <router-link class="icon-btn mx-2 space-x-1" to="/playground">
           <akar-icons:arrow-down-right class="inline-block text-sm" />
           <span>
 
-            ATM-like Input
+            Playground
+
           </span>
         </router-link>
       </li>

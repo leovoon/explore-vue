@@ -7,6 +7,7 @@ declare module 'vue' {
     'AkarIcons:chevronRight': typeof import('virtual:vite-icons/akar-icons/chevron-right')['default']
     'AntDesign:caretRightFilled': typeof import('virtual:vite-icons/ant-design/caret-right-filled')['default']
     'AntDesign:swapRightOutlined': typeof import('virtual:vite-icons/ant-design/swap-right-outlined')['default']
+    AtmInput: typeof import('./src/components/AtmInput.vue')['default']
     CarbonDicomOverlay: typeof import('virtual:vite-icons/carbon/dicom-overlay')['default']
     CarbonLanguage: typeof import('virtual:vite-icons/carbon/language')['default']
     CarbonLogoGithub: typeof import('virtual:vite-icons/carbon/logo-github')['default']
@@ -16,6 +17,8 @@ declare module 'vue' {
     CarbonWarning: typeof import('virtual:vite-icons/carbon/warning')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     README: typeof import('./src/components/README.md')['default']
+    TngInput: typeof import('./src/components/TngInput.vue')['default']
+    TnGInput: typeof import('./src/components/TnGInput.vue')['default']
     WhhRoadsignright: typeof import('virtual:vite-icons/whh/roadsignright')['default']
   }
 }

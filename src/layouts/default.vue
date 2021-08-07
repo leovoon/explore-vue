@@ -3,7 +3,12 @@
     <router-view />
     <Footer />
     <div class="mt-5 mx-auto text-center opacity-25 text-sm">
-      [Default Layout]
+      <p>
+        Made with <span class="heart">
+          ❤
+        </span>
+        by leovoon
+      </p>
     </div>
   </main>
 </template>

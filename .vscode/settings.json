@@ -3,7 +3,6 @@
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "locales",
   "i18n-ally.sortKeys": true,
-  "prettier.enable": false,
   "typescript.tsdk": "node_modules/typescript/lib",
   "volar.tsPlugin": true,
   "volar.tsPluginStatus": false,
@@ -14,4 +13,5 @@
     "*.css": "postcss",
   },
   "volar.codeLens.pugTools": false,
+  "volar.codeLens.scriptSetupTools": false,
 }

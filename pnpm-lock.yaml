@@ -20,6 +20,7 @@ specifiers:
   pnpm: ^6.10.3
   prism-theme-vars: ^0.2.2
   typescript: ^4.3.5
+  v-money3: ^3.15.1
   vite: ^2.4.2
   vite-plugin-components: ^0.13.0
   vite-plugin-icons: ^0.6.5
@@ -41,6 +42,7 @@ dependencies:
   '@vueuse/head': 0.6.0_vue@3.1.5
   nprogress: 0.2.0
   prism-theme-vars: 0.2.2
+  v-money3: 3.15.1
   vue: 3.1.5
   vue-demi: 0.11.2_vue@3.1.5
   vue-global-api: 0.2.4_vue@3.1.5
@@ -6750,6 +6752,10 @@ packages:
     resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=}
     engines: {node: '>= 0.4.0'}
     dev: true
+
+  /v-money3/3.15.1:
+    resolution: {integrity: sha512-Uy2iQoWpKL7DSoLKua62Ii8Q2NL61drCCdqeUsOuqpeg2gQ/PkH7ztAGQsq9W2vEtu+4dg5wvUc84u38tJiGug==}
+    dev: false
 
   /v8-compile-cache/2.3.0:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
