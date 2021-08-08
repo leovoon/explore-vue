@@ -14,4 +14,5 @@
   },
   "volar.codeLens.pugTools": false,
   "volar.codeLens.scriptSetupTools": false,
+  "prettier.trailingComma": "none",
 }

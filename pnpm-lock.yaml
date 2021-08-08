@@ -11,6 +11,8 @@ specifiers:
   '@vue/server-renderer': ^3.1.5
   '@vueuse/core': ^5.1.4
   '@vueuse/head': ^0.6.0
+  '@windicss/plugin-interaction-variants': ^1.0.0
+  '@windicss/plugin-question-mark': ^0.1.1
   cross-env: ^7.0.3
   eslint: ^7.31.0
   https-localhost: ^4.6.5
@@ -58,6 +60,8 @@ devDependencies:
   '@vitejs/plugin-vue': 1.2.5_@vue+compiler-sfc@3.1.5
   '@vue/compiler-sfc': 3.1.5_vue@3.1.5
   '@vue/server-renderer': 3.1.5_vue@3.1.5
+  '@windicss/plugin-interaction-variants': 1.0.0
+  '@windicss/plugin-question-mark': 0.1.1
   cross-env: 7.0.3
   eslint: 7.31.0
   https-localhost: 4.6.5
@@ -2125,6 +2129,14 @@ packages:
       windicss: 3.1.5
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@windicss/plugin-interaction-variants/1.0.0:
+    resolution: {integrity: sha512-jk0kvJEwphPlzjgCASxi0yCrLIrMPBHKTjPB1vF2LZsmWVaIPhKQRfpJW6+G093ipDos1E2BkevDrh/R2Ln8gg==}
+    dev: true
+
+  /@windicss/plugin-question-mark/0.1.1:
+    resolution: {integrity: sha512-LTnySh28mFncJqCw7VjZzYD3HkJynjHQ8wAIgsZUPTi8WzDJtUeYyFc8/ImXGL/jon55zzg9yy9y/lUyCvvrmA==}
     dev: true
 
   /@windicss/plugin-utils/1.2.4:

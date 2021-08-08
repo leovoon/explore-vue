@@ -1,7 +1,8 @@
 import { defineConfig } from 'windicss/helpers'
 import colors from 'windicss/colors'
 import typography from 'windicss/plugin/typography'
-
+import '@windicss/plugin-question-mark'
+import '@windicss/plugin-interaction-variants'
 export default defineConfig({
   darkMode: 'class',
   // https://windicss.org/posts/v30.html#attributify-mode
@@ -9,6 +10,9 @@ export default defineConfig({
 
   plugins: [
     typography(),
+    require('@windicss/plugin-question-mark'),
+    require('@windicss/plugin-interaction-variants'),
+
   ],
   theme: {
     extend: {
