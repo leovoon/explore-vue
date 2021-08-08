@@ -81,6 +81,7 @@ export default {
         thousands: ',',
         prefix: 'RM ',
         min: Number.MIN_SAFE_INTEGER,
+        disableNegative: true,
         max: 10000000,
         precision: 2,
         masked: false,
