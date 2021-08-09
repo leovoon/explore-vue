@@ -6,8 +6,7 @@ const name = ref('')
 
 const router = useRouter()
 const go = () => {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
+  if (name.value) router.push(`/hi/${encodeURIComponent(name.value)}`)
 }
 
 const { t } = useI18n()
@@ -18,26 +17,41 @@ const { t } = useI18n()
     <p class="text-4xl">
       <whh-roadsignright class="inline-block" />
     </p>
-    <p>
-      vueInFreeTime
-    </p>
+    <p>vueInFreeTime</p>
     <p>
       <em class="text-sm opacity-75">{{ t('intro.desc') }}</em>
     </p>
 
     <ul class="flex flex-col list-none my-4 space-y-2">
-      <li class=" cursor-pointer ">
+      <li class="cursor-pointer">
         <router-link class="icon-btn mx-2 space-x-1" to="/playground">
           <akar-icons:arrow-down-right class="inline-block text-sm" />
-          <span>
-
-            Playground
-
-          </span>
+          <span> Playground </span>
         </router-link>
       </li>
     </ul>
 
+    <ul class="list-none flex flex-col justify-center ? items-start">
+      #frontend practice
+      <li class="cursor-pointer">
+        <router-link
+          class="icon-btn mx-2 inline-flex items-center space-x-1"
+          to="/atm-input"
+        >
+          <akar-icons:chevron-right class="inline-block text-xs" />
+          <span> TnG transfer </span>
+        </router-link>
+      </li>
+      <li class="cursor-pointer">
+        <router-link
+          class="icon-btn mx-2 inline-flex items-center space-x-1"
+          to="/twitter-signup"
+        >
+          <akar-icons:chevron-right class="inline-block text-xs" />
+          <span> Twitter Sign Up </span>
+        </router-link>
+      </li>
+    </ul>
     <div class="py-4" />
 
     <input
@@ -54,15 +68,11 @@ const { t } = useI18n()
       border="~ rounded gray-200 dark:gray-700"
       outline="none active:none"
       @keydown.enter="go"
-    >
+    />
     <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
 
     <div>
-      <button
-        class="m-3 text-sm btn"
-        :disabled="!name"
-        @click="go"
-      >
+      <button class="m-3 text-sm btn" :disabled="!name" @click="go">
         {{ t('button.go') }}
       </button>
     </div>

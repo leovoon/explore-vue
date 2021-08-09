@@ -11,7 +11,7 @@ title: ATM Like Input
 
 I was trying to implement TnG numeric input style with Vue. Here is my approach and demo.
 
-<tng-input/>
+<twitter-input/>
 
 ```js
 
@@ -179,5 +179,3 @@ button[disabled]{
 </style>
 
 ```
-
-<!-- Check out the [GitHub repo](https://github.com/antfu/vitesse) for more details. -->

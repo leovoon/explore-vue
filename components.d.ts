@@ -19,6 +19,7 @@ declare module 'vue' {
     README: typeof import('./src/components/README.md')['default']
     TngInput: typeof import('./src/components/TngInput.vue')['default']
     TnGInput: typeof import('./src/components/TnGInput.vue')['default']
+    TwitterInput: typeof import('./src/components/TwitterInput.vue')['default']
     WhhRoadsignright: typeof import('virtual:vite-icons/whh/roadsignright')['default']
   }
 }
