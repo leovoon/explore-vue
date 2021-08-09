@@ -1,15 +1,15 @@
 ---
-title: ATM Like Input
+title: Animate placeholder/label in input field
 ---
 
 <div class="text-center">
   <!-- You can use Vue components inside markdown -->
   <carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
-  <h3>ATM Like Input</h3>
+  <h3>Stuck at placeholder animation, redo!</h3>
   
 </div>
 
-I was trying to implement TnG numeric input style with Vue. Here is my approach and demo.
+bla bla bla
 
 <twitter-input/>
 
