@@ -36,23 +36,23 @@ title: Sort data by key
       <button :class="checkActive('body')" @click="sortByOrder('body')">
         Comment
       </button>
-      <button :class="checkActive('likes')" @click="sortByOrder('likes')">
-        Likes
-      </button>
-      <button :class="checkActive('userId')" @click="sortByOrder('userId')">
+      <button :class="checkActive('name')" @click="sortByOrder('name')">
         Username
       </button>
+      <button :class="checkActive('email')" @click="sortByOrder('email')">
+        Email
+      </button>
     </div>
-    <div class="comments-list ">
-      <ul v-if="sortedComments" class="list-none">
-        <li v-for="comment in sortedComments" :key="comment.id" class=" m-4 rounded-md border p-3 text-xs shadow-md bg-light-blue-100 dark:border-transparent cursor-pointer dark:text-light-200 dark:bg-gray-800 dark:hover:(transform -translate-y-0.5 transition-transform)">
+    <div class="comments-list">
+      <ul v-if="sortedComments" class="space-y-4">
+        <li v-for="comment in sortedComments" :key="comment.id" class="m-4 rounded-md border p-3 text-xs shadow-md bg-light-blue-100 dark:border-transparent cursor-pointer dark:text-light-200 dark:bg-gray-800 dark:hover:(transform -translate-y-0.5 transition-transform)">
           <div class="comment-text mb-2 text-left">
             {{ comment.body }}
           </div>
 
-          <div class="likes flex justify-around">
-            <span class="text-pink-500 ">user{{ comment.userId }}</span>
-            <span class="text-blue-500">{{ comment.likes }} Likes</span>
+          <div class="name flex justify-around">
+            <span class="text-pink-500 ">{{ comment.email }}</span>
+            <span class="text-blue-500">{{ comment.name }} </span>
           </div>
         </li>
       </ul>
@@ -68,14 +68,14 @@ title: Sort data by key
 
 <script lang="ts">
 interface UserComment {
-  id: number
-  userId: number
-  likes: number
-  body: string
   postId: number
+  id: number
+  name: string
+  email: string
+  body: string
 }
-    type OrderTerm = 'body' | 'likes' | 'userId'
-    type OrderDirection = 'asc' | 'desc'
+      type OrderTerm = 'body' | 'name' | 'email'
+      type OrderDirection = 'asc' | 'desc'
 
 export default defineComponent({
   setup() {
@@ -85,9 +85,9 @@ export default defineComponent({
     const orderDirection = ref<OrderDirection>('asc')
 
     onMounted(() => {
-      fetch('http://fakeapi.jsonparseronline.com/comments')
+      fetch('https://jsonplaceholder.typicode.com/comments')
         .then(response => response.json())
-        .then(json => comments.value = json.slice(0, 5)) // get only first 5 comments
+        .then(json => comments.value = json.slice(0, 5))
         .catch(error => error.value = error)
     })
 
@@ -120,9 +120,8 @@ export default defineComponent({
 
 <style scoped>
 button {
-@apply rounded bg-light-blue-200 px-2 py-1 focus:outline-light-blue-400 dark:bg-gray-800
+    @apply rounded bg-light-blue-200 px-2 py-1 focus:outline-light-blue-400 dark:bg-gray-800
 }
 </style>
-
 
 ```
