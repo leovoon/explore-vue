@@ -1,10 +1,22 @@
+---
+title: Sort data by key
+---
+
+<div class="text-center">
+  <!-- You can use Vue components inside markdown -->
+  <carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
+  <h3>Sort by key</h3>
+ <comment-sort-by-key/>
+</div>
+
+
+
+```js
 <template>
   <div>
-    <h1 class="absolute top-0 text-lg font-bold text-left">
-      Playground
-    </h1>
-
-    <p>practical sorting</p>
+    <p class="text-center">
+      practical example of sorting
+    </p>
 
     <div class="flex justify-around items-center">
       <p class="text-sm mt-4 mb-2">
@@ -31,9 +43,9 @@
         Username
       </button>
     </div>
-    <div class="comments-list">
-      <ul v-if="sortedComments">
-        <li v-for="comment in sortedComments" :key="comment.id" class="m-4 rounded-md border p-3 text-xs shadow-md bg-light-blue-100 dark:border-transparent cursor-pointer dark:text-light-200 dark:bg-gray-800 dark:hover:(transform -translate-y-0.5 transition-transform)">
+    <div class="comments-list ">
+      <ul v-if="sortedComments" class="list-none">
+        <li v-for="comment in sortedComments" :key="comment.id" class=" m-4 rounded-md border p-3 text-xs shadow-md bg-light-blue-100 dark:border-transparent cursor-pointer dark:text-light-200 dark:bg-gray-800 dark:hover:(transform -translate-y-0.5 transition-transform)">
           <div class="comment-text mb-2 text-left">
             {{ comment.body }}
           </div>
@@ -62,8 +74,8 @@ interface UserComment {
   body: string
   postId: number
 }
-  type OrderTerm = 'body' | 'likes' | 'userId'
-  type OrderDirection = 'asc' | 'desc'
+    type OrderTerm = 'body' | 'likes' | 'userId'
+    type OrderDirection = 'asc' | 'desc'
 
 export default defineComponent({
   setup() {
@@ -75,7 +87,7 @@ export default defineComponent({
     onMounted(() => {
       fetch('http://fakeapi.jsonparseronline.com/comments')
         .then(response => response.json())
-        .then(json => comments.value = json.slice(0, 5))
+        .then(json => comments.value = json.slice(0, 5)) // get only first 5 comments
         .catch(error => error.value = error)
     })
 
@@ -95,7 +107,6 @@ export default defineComponent({
       return order.value === term ? 'outline-blue-400' : null
     }
     return {
-      comments,
       error,
       order,
       orderDirection,
@@ -109,11 +120,9 @@ export default defineComponent({
 
 <style scoped>
 button {
-  @apply rounded bg-light-blue-200 px-2 py-1 focus:outline-light-blue-400 dark:bg-gray-800
+@apply rounded bg-light-blue-200 px-2 py-1 focus:outline-light-blue-400 dark:bg-gray-800
 }
 </style>
 
-<route lang="yaml">
-meta:
-  layout: default
-</route>
+
+```

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-
 const name = ref('')
 
 const router = useRouter()
@@ -10,6 +9,7 @@ const go = () => {
 }
 
 const { t } = useI18n()
+
 </script>
 
 <template>
@@ -31,14 +31,13 @@ const { t } = useI18n()
       </li>
     </ul>
 
-    <ul class="list-none flex flex-col justify-center ? items-start">
+    <ul class="list-none flex flex-col justify-center  items-center">
       #frontend practice
       <li class="cursor-pointer">
         <router-link
           class="icon-btn mx-2 inline-flex items-center space-x-1"
           to="/atm-input"
         >
-          <akar-icons:chevron-right class="inline-block text-xs" />
           <span> TnG transfer </span>
         </router-link>
       </li>
@@ -47,8 +46,15 @@ const { t } = useI18n()
           class="icon-btn mx-2 inline-flex items-center space-x-1"
           to="/twitter-signup"
         >
-          <akar-icons:chevron-right class="inline-block text-xs" />
           <span> Twitter Sign Up </span>
+        </router-link>
+      </li>
+      <li class="cursor-pointer">
+        <router-link
+          class="icon-btn mx-2 inline-flex items-center space-x-1"
+          to="/sort-by-key"
+        >
+          <span>Sorting</span>
         </router-link>
       </li>
     </ul>
@@ -61,12 +67,8 @@ const { t } = useI18n()
       :aria-label="t('intro.whats-your-name')"
       type="text"
       autocomplete="false"
-      p="x-4 y-2"
-      w="250px"
-      text="center"
-      bg="transparent"
-      border="~ rounded gray-200 dark:gray-700"
-      outline="none active:none"
+      class="px-4 py-2 w-[250px] text-center bg-transparent border rounded border-gray-200 dark:border-gray-700 "
+
       @keydown.enter="go"
     />
     <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>

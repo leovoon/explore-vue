@@ -15,10 +15,11 @@ declare module 'vue' {
     CarbonPedestrian: typeof import('virtual:vite-icons/carbon/pedestrian')['default']
     CarbonSun: typeof import('virtual:vite-icons/carbon/sun')['default']
     CarbonWarning: typeof import('virtual:vite-icons/carbon/warning')['default']
+    CommentSortByKey: typeof import('./src/components/CommentSortByKey.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     README: typeof import('./src/components/README.md')['default']
+    SortByKey: typeof import('./src/components/SortByKey.vue')['default']
     TngInput: typeof import('./src/components/TngInput.vue')['default']
-    TnGInput: typeof import('./src/components/TnGInput.vue')['default']
     TwitterInput: typeof import('./src/components/TwitterInput.vue')['default']
     WhhRoadsignright: typeof import('virtual:vite-icons/whh/roadsignright')['default']
   }
