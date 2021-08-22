@@ -3,13 +3,8 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AdviceSearch: typeof import('./src/components/AdviceSearch.vue')['default']
+    AdviceSlip: typeof import('./src/components/AdviceSlip.vue')['default']
     'AkarIcons:arrowDownRight': typeof import('virtual:vite-icons/akar-icons/arrow-down-right')['default']
-    'AkarIcons:chevronRight': typeof import('virtual:vite-icons/akar-icons/chevron-right')['default']
-    AlbumSearchByKey: typeof import('./src/components/AdviceSearch.vue')['default']
-    'AntDesign:caretRightFilled': typeof import('virtual:vite-icons/ant-design/caret-right-filled')['default']
-    'AntDesign:swapRightOutlined': typeof import('virtual:vite-icons/ant-design/swap-right-outlined')['default']
-    AtmInput: typeof import('./src/components/AtmInput.vue')['default']
     CarbonDicomOverlay: typeof import('virtual:vite-icons/carbon/dicom-overlay')['default']
     CarbonLanguage: typeof import('virtual:vite-icons/carbon/language')['default']
     CarbonLogoGithub: typeof import('virtual:vite-icons/carbon/logo-github')['default']
@@ -19,7 +14,6 @@ declare module 'vue' {
     CarbonWarning: typeof import('virtual:vite-icons/carbon/warning')['default']
     CommentSortByKey: typeof import('./src/components/CommentSortByKey.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
-    README: typeof import('./src/components/README.md')['default']
     TngInput: typeof import('./src/components/TngInput.vue')['default']
     TwitterInput: typeof import('./src/components/TwitterInput.vue')['default']
     WhhRoadsignright: typeof import('virtual:vite-icons/whh/roadsignright')['default']

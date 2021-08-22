@@ -4,7 +4,7 @@
 
     <div
       class="relative my-4
-    border rounded focus-within:border-green-400 "
+      border rounded focus-within:border-green-400 "
     >
       <input
         id="search"
@@ -28,14 +28,14 @@
           {{ slip.advice }}
         </ol>
       </ul>
-      <v-else>
+      <ul v-else>
         <ol v-if="notice" id="no-result">
           {{ notice }}
         </ol>
         <ol v-if="error" id="error">
           {{ error }}
         </ol>
-      </v-else>
+      </ul>
     </div>
   </div>
 </template>
@@ -82,29 +82,29 @@ export default {
 
 }
 </script>
-<style scoped>
-input:focus-within ~ label,
-input:not(:placeholder-shown) ~ label {
-  @apply transform scale-75 -translate-y-3;
-}
+  <style scoped>
+  input:focus-within ~ label,
+  input:not(:placeholder-shown) ~ label {
+    @apply transform scale-75 -translate-y-3;
+  }
 
-input:focus-within ~ label {
-  @apply dark:text-green-300 text-green-800;
-}
+  input:focus-within ~ label {
+    @apply dark:text-green-300 text-green-800;
+  }
 
-ol {
- @apply py-8 px-4 bg-green-100 dark:bg-green-600 rounded shadow-md;
-}
+  ol {
+   @apply py-8 px-4 bg-green-100 dark:bg-green-600 rounded shadow-md;
+  }
 
-#valid-result {
-  @apply dark:bg-green-700;
-}
+  #valid-result {
+    @apply dark:bg-green-700;
+  }
 
-#no-result {
-  @apply dark:bg-green-700;
-}
+  #no-result {
+    @apply dark:bg-green-700;
+  }
 
-#error {
-  @apply dark:bg-red-500 bg-red-300;
-}
-</style>
+  #error {
+    @apply dark:bg-red-500 bg-red-300;
+  }
+  </style>
