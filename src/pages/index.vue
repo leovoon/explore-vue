@@ -54,7 +54,15 @@ const { t } = useI18n()
           class="icon-btn mx-2 inline-flex items-center space-x-1"
           to="/sort-by-key"
         >
-          <span>Sorting</span>
+          <span>Sorting by key</span>
+        </router-link>
+      </li>
+      <li class="cursor-pointer">
+        <router-link
+          class="icon-btn mx-2 inline-flex items-center space-x-1"
+          to="/search-by-key"
+        >
+          <span>Search by key</span>
         </router-link>
       </li>
     </ul>

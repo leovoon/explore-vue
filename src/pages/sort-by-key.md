@@ -6,9 +6,9 @@ title: Sort data by key
   <!-- You can use Vue components inside markdown -->
   <carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
   <h3>Sort by key</h3>
- <comment-sort-by-key/>
 </div>
 
+ <comment-sort-by-key/>
 
 
 ```js
@@ -45,7 +45,7 @@ title: Sort data by key
     </div>
     <div class="comments-list">
       <ul v-if="sortedComments" class="space-y-4">
-        <li v-for="comment in sortedComments" :key="comment.id" class="m-4 rounded-md border p-3 text-xs shadow-md bg-light-blue-100 dark:border-transparent cursor-pointer dark:text-light-200 dark:bg-gray-800 dark:hover:(transform -translate-y-0.5 transition-transform)">
+        <ol v-for="comment in sortedComments" :key="comment.id" class="m-4 rounded-md border p-3 text-xs shadow-md bg-light-blue-100 dark:border-transparent cursor-pointer dark:text-light-200 dark:bg-gray-800 dark:hover:(transform -translate-y-0.5 transition-transform)">
           <div class="comment-text mb-2 text-left">
             {{ comment.body }}
           </div>
@@ -54,7 +54,7 @@ title: Sort data by key
             <span class="text-pink-500 ">{{ comment.email }}</span>
             <span class="text-blue-500">{{ comment.name }} </span>
           </div>
-        </li>
+        </ol>
       </ul>
       <p v-else-if="error" class="text-sm text-red-500">
         Error fetching data

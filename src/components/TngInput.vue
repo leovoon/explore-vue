@@ -67,7 +67,7 @@
           maxlength="50"
           class="rounded-t-sm font-semibold bg-gray-100 border-b-2 border-gray-500 placeholder-transparent py-4 pb-1 outline-transparent pl-4 group-focus-within:(border-blue-600)"
         >
-        <span v-show="!textInputActive" class="flex h-full bg-gray-100 text-lg w-full pl-4 text-gray-600 items-center absolute border-b-2 border-gray-500" @click="inputActiveText">
+        <span v-show="!textInputActive" class="flex h-full bg-gray-100 w-full text-sm pl-4 text-gray-600 items-center absolute border-b-2 border-gray-500" @click="inputActiveText">
           What's the transfer for?
         </span>
       </div>

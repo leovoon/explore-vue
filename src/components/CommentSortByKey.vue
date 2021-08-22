@@ -10,10 +10,10 @@
       </p>
       <select v-model="orderDirection" class="p-.5 inline-flex items-center border border-light-blue-300 rounded dark:text-dark-50 focus:outline-none dark:bg-gray-800 dark:text-light-300">
         <option value="asc">
-          asc
+          ascending
         </option>
         <option value="desc">
-          desc
+          descending
         </option>
       </select>
     </div>
@@ -31,7 +31,7 @@
     </div>
     <div class="comments-list">
       <ul v-if="sortedComments" class="space-y-4">
-        <li v-for="comment in sortedComments" :key="comment.id" class="m-4 rounded-md border p-3 text-xs shadow-md bg-light-blue-100 dark:border-transparent cursor-pointer dark:text-light-200 dark:bg-gray-800 dark:hover:(transform -translate-y-0.5 transition-transform)">
+        <ol v-for="comment in sortedComments" :key="comment.id" class="m-4 rounded-md border p-3 text-xs shadow-md bg-light-blue-100 dark:border-transparent cursor-pointer dark:text-light-200 dark:bg-gray-800 dark:hover:(transform -translate-y-0.5 transition-transform)">
           <div class="comment-text mb-2 text-left">
             {{ comment.body }}
           </div>
@@ -40,7 +40,7 @@
             <span class="text-pink-500 ">{{ comment.email }}</span>
             <span class="text-blue-500">{{ comment.name }} </span>
           </div>
-        </li>
+        </ol>
       </ul>
       <p v-else-if="error" class="text-sm text-red-500">
         Error fetching data
