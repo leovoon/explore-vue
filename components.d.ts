@@ -3,9 +3,10 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AdviceSearch: typeof import('./src/components/AdviceSearch.vue')['default']
     'AkarIcons:arrowDownRight': typeof import('virtual:vite-icons/akar-icons/arrow-down-right')['default']
     'AkarIcons:chevronRight': typeof import('virtual:vite-icons/akar-icons/chevron-right')['default']
-    AlbumSearchByKey: typeof import('./src/components/AlbumSearchByKey.vue')['default']
+    AlbumSearchByKey: typeof import('./src/components/AdviceSearch.vue')['default']
     'AntDesign:caretRightFilled': typeof import('virtual:vite-icons/ant-design/caret-right-filled')['default']
     'AntDesign:swapRightOutlined': typeof import('virtual:vite-icons/ant-design/swap-right-outlined')['default']
     AtmInput: typeof import('./src/components/AtmInput.vue')['default']

@@ -62,7 +62,7 @@ const { t } = useI18n()
           class="icon-btn mx-2 inline-flex items-center space-x-1"
           to="/search-by-key"
         >
-          <span>Search by key</span>
+          <span>Advice Slip</span>
         </router-link>
       </li>
     </ul>

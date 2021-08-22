@@ -8,7 +8,7 @@ title: Search data by calling from api
   <h3>Search by calling api data</h3> 
 
 </div>
- <album-search-by-key/>
+ <advice-search/>
 
 
 ```js
