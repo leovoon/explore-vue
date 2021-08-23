@@ -36,11 +36,12 @@ title: Search data by calling from api
     </span>
 
     <div class="my-4">
-      <ul v-if="slips">
+      <ul v-if="!notice">
         <ol v-for="slip in slips" id="valid-result" :key="slip.id">
           {{ slip.advice }}
         </ol>
       </ul>
+
       <ul v-else>
         <ol v-if="notice" id="no-result">
           {{ notice }}
@@ -77,11 +78,10 @@ export default {
             notice.value = null
           }
           else {
-            notice.value = data.message.text
             slips.value = []
+            notice.value = data.message.text
           }
-        })
-        .catch(error => error.value = error)
+        }).catch(error => error.value = error)
     }
 
     return {
