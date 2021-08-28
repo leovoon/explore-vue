@@ -1,11 +1,12 @@
 <template>
-  <div class="px-2">
+  <div class="px-10 py-4 dark:bg-dark-900">
     <div class="logo w-full flex justify-center items-center my-1">
       <svg
         viewBox="0 0 24 24"
         aria-label="Twitter"
         fill="#1da1f2"
         class="
+        dark:fill-light-50
           w-8
           h-8
           r-13gxpu9
@@ -30,45 +31,52 @@
       <h4 class="self-start font-bold text-2xl">
         Create your account
       </h4>
-      <div class="w-full relative group">
-        <span class="word-length absolute font-light justify-end right-0 p-2">1 / 50</span>
+      <div
+        class="relative my-4
+      border dark:border-dark-50 rounded dark:text-gray-500 focus-within:(border-light-blue-500 text-light-blue-500 dark:text-light-blue-500) "
+      >
         <input
           id="name"
+          v-model="name"
           type="text"
-          class="border-2 group-focus-within:border-light-blue-600"
-        />
-        <label
-          for="name"
-          class="
-            name
-            absolute text-lg text-gray-500 top-4 left-3 transition-all duration-150 ease-in-out
-            group-focus-within:(text-sm
-            text-light-blue-600
-            top-2
-            )
-          "
-        >Name</label>
+          placeholder=" "
+          class="px-2 pt-4 rounded  dark:text-white text-dark-200 leading-10  block w-full appearance-none focus:outline-none bg-transparent"
+        >
+        <label for="name" class="font-thin absolute top-3 text-lg left-2 -z-{-1} origin-top-left duration-300 ease-in-out">Name</label>
       </div>
-      <div class="w-full relative group">
+
+      <div
+        v-show="!modeEmail"
+        class="relative my-4
+      border dark:border-dark-50 rounded dark:text-gray-500 focus-within:(border-light-blue-500 text-light-blue-500 dark:text-light-blue-500) "
+      >
         <input
-          id="email"
+          id="Phone"
+          v-model="phone"
           type="text"
-          class="border-2 group-focus-within:border-light-blue-600"
-        />
-        <label
-          for="email"
-          class="
-            name
-            absolute text-lg text-gray-500 top-4 left-3 transition-all duration-150 ease-in-out
-            group-focus-within:(text-sm
-            text-light-blue-600
-            top-2
-            )
-          "
-        >Email</label>
+          placeholder=" "
+          class="px-2 pt-4 rounded text-dark-200 dark:text-white leading-10  block w-full appearance-none focus:outline-none bg-transparent"
+        >
+        <label for="phone" class="font-thin absolute top-3 text-lg left-2 -z-{-1} origin-top-left duration-300 ease-in-out">Phone</label>
       </div>
-      <p class="text-normal text-blue-400 self-start cursor-pointer">
-        Use email instead
+
+      <div
+        v-show="modeEmail"
+        class="relative my-4
+      border dark:border-dark-50 rounded dark:text-gray-500 focus-within:(border-light-blue-500 text-light-blue-500 dark:text-light-blue-500) "
+      >
+        <input
+          id="Email"
+          v-model="email"
+          type="text"
+          placeholder=" "
+          class="px-2 pt-4 rounded text-dark-200 dark:text-white leading-10  block w-full appearance-none focus:outline-none bg-transparent"
+        >
+        <label for="phone" class="font-thin absolute top-3 text-lg left-2 -z-{-1} origin-top-left duration-300 ease-in-out">Email</label>
+      </div>
+
+      <p class="text-normal text-blue-400 self-start cursor-pointer" @click="togglePhone()">
+        {{ modeEmail ? "Use phone instead" : "Use email instead" }}
       </p>
       <div class="text-left">
         <p class="text-lg font-bold">
@@ -96,17 +104,35 @@
     </button>
   </div>
 </template>
-<script setup lang="ts">
+<script lang="ts">
+export default {
+  setup() {
+    const name = ref('')
+    const email = ref('')
+    const phone = ref('')
+    const modeEmail = ref(true)
+    const togglePhone = () => {
+      return modeEmail.value = !modeEmail.value
+    }
+
+    return {
+      modeEmail,
+      togglePhone,
+      name,
+      email,
+      phone,
+
+    }
+  },
+}
 
 </script>
 <style scoped>
-input {
-  @apply pt-8 pb-2 px-3  leading-3 w-full block rounded-md border-[1px]   outline-transparent  placeholder-dark-50 group-focus-within:placeholder-transparent;
-}
 
-input[type='date'] {
-  @apply text-sm pt-5 pb-2;
-}
+input:focus-within ~ label,
+  input:not(:placeholder-shown) ~ label {
+    @apply transform scale-75 -translate-y-3;
+  }
 
 .word-length {
   font-size: xx-small;
