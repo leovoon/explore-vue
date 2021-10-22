@@ -31,7 +31,7 @@ title: Search data by calling from api
     </div>
     <span class="text-gray-400">e.g love, smile, happy, never, etc.</span>
     <div class="my-4">
-      <ul v-if="results">
+      <ul v-if="results" v-motion-slide-bottom :delay="200">
         <span
           v-if="results.total_results"
         >{{ results.total_results > 1 ? "Showing results: " : "Showing result: " }} {{ results.total_results }}</span>
@@ -50,11 +50,11 @@ title: Search data by calling from api
 
       <ul v-if="isLoading">
         <ol class="flex justify-center">
-          <img src="hearts.svg" width="60" alt="loading svg" />
+          <!-- loading icon here -->
         </ol>
       </ul>
       <ul v-if="error">
-        <ol v-if="error" id="error">{{ error }}</ol>
+        <ol id="error">{{ error }}</ol>
       </ul>
     </div>
   </div>
@@ -103,5 +103,6 @@ ol {
   @apply dark:bg-red-500 bg-red-300;
 }
 </style>
+
 
 ```
