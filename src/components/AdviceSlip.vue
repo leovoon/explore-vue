@@ -36,7 +36,7 @@
       </ul>
 
       <ul v-if="isLoading">
-        <div class="flex flex-col justify-center">
+        <div class="flex  justify-center">
           <svg
             width="60"
             height="64"
