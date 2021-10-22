@@ -9,8 +9,9 @@ title: ATM Like Input
   
 </div>
 
-
-<tng-input/>
+<client-only>
+  <tng-input/>
+</client-only>
 
 ```js
 
@@ -178,5 +179,3 @@ button[disabled]{
 </style>
 
 ```
-
-<!-- Check out the [GitHub repo](https://github.com/antfu/vitesse) for more details. -->

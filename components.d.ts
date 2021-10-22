@@ -11,6 +11,7 @@ declare module 'vue' {
     CarbonMoon: typeof import('virtual:vite-icons/carbon/moon')['default']
     CarbonPedestrian: typeof import('virtual:vite-icons/carbon/pedestrian')['default']
     CarbonSun: typeof import('virtual:vite-icons/carbon/sun')['default']
+    CarbonWarning: typeof import('virtual:vite-icons/carbon/warning')['default']
     CommentSortByKey: typeof import('./src/components/CommentSortByKey.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     TngInput: typeof import('./src/components/TngInput.vue')['default']

@@ -134,6 +134,7 @@ export default defineConfig({
       'vue',
       'vue-router',
       '@vueuse/core',
+      
     ],
     exclude: [
       'vue-demi',
