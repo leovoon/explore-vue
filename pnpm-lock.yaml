@@ -5,6 +5,7 @@ specifiers:
   '@iconify/json': ^1.1.417
   '@intlify/vite-plugin-vue-i18n': ^2.4.0
   '@types/nprogress': ^0.2.0
+  '@types/validator': ^13.6.5
   '@typescript-eslint/eslint-plugin': ^4.33.0
   '@vitejs/plugin-vue': ^1.9.3
   '@vue/compiler-sfc': ^3.2.20
@@ -25,6 +26,8 @@ specifiers:
   prism-theme-vars: ^0.2.2
   typescript: ^4.4.4
   v-money3: ^3.20.1
+  validator: ^13.6.0
+  vest: ^3.2.7
   vite: ^2.6.10
   vite-plugin-components: ^0.13.3
   vite-plugin-icons: ^0.6.5
@@ -43,6 +46,7 @@ specifiers:
   vue-tsc: ^0.2.3
 
 dependencies:
+  '@types/validator': 13.6.5
   '@vueuse/core': 5.3.0_vue@3.2.20
   '@vueuse/head': 0.6.0_vue@3.2.20
   '@vueuse/motion': 2.0.0-beta.4_vue@3.2.20
@@ -50,6 +54,8 @@ dependencies:
   patch-vue-directive-ssr: 0.0.1
   prism-theme-vars: 0.2.2
   v-money3: 3.20.1_vue@3.2.20
+  validator: 13.6.0
+  vest: 3.2.7
   vue: 3.2.20
   vue-demi: 0.11.4_vue@3.2.20
   vue-global-api: 0.2.4_vue@3.2.20
@@ -1581,6 +1587,10 @@ packages:
   /@types/trusted-types/2.0.2:
     resolution: {integrity: sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==}
     dev: true
+
+  /@types/validator/13.6.5:
+    resolution: {integrity: sha512-ilpDKpjjq/w/IyyTuQ38mABdaEzTzTugPyU7DlMCMKd8MMYngnPKhA2TgdO1MfEDED9KVV7uSOL1fDkgwJp/wg==}
+    dev: false
 
   /@typescript-eslint/eslint-plugin/4.33.0_cc617358c89d3f38c52462f6d809db4c:
     resolution: {integrity: sha512-aINiAxGVdOl1eJyVjaWn/YcVAq4Gi/Yo35qHGCnqbWVz61g39D0h23veY/MA0rFFGfxK7TySg2uwDeNv+JgVpg==}
@@ -5695,10 +5705,19 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
+  /validator/13.6.0:
+    resolution: {integrity: sha512-gVgKbdbHgtxpRyR8K0O6oFZPhhB5tT1jeEHZR0Znr9Svg03U0+r9DXWMrnRAB+HtCStDQKlaIZm42tVsVjqtjg==}
+    engines: {node: '>= 0.10'}
+    dev: false
+
   /vary/1.1.2:
     resolution: {integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=}
     engines: {node: '>= 0.8'}
     dev: true
+
+  /vest/3.2.7:
+    resolution: {integrity: sha512-s0W8BZDRwOu7xTD8cE4JZV8tY1xGigerwzsDu1ggqNYlK9Ehvs+fElDOapVgP0DOenNcO+lM31dMUpinNDVGiA==}
+    dev: false
 
   /vite-plugin-components/0.13.3_vite@2.6.10:
     resolution: {integrity: sha512-6vLWPrEqFSW7REYvux/WVwxsytg/DcstVhdgAT806cZi/KGiQgB8dyFnLkrkFawxUQruuGkLWfS99Z/64mMC0w==}

@@ -39,7 +39,7 @@ const { t } = useI18n()
           class="icon-btn mx-2 inline-flex items-center space-x-1"
           to="/atm-input"
         >
-          <span> TnG transfer </span>
+          <span> Vmoney atm-liked input </span>
         </router-link>
       </li>
       <li class="cursor-pointer">
@@ -47,7 +47,7 @@ const { t } = useI18n()
           class="icon-btn mx-2 inline-flex items-center space-x-1"
           to="/twitter-signup"
         >
-          <span> Twitter Sign Up </span>
+          <span> Form validation using Vest </span>
         </router-link>
       </li>
       <li class="cursor-pointer">
@@ -55,7 +55,7 @@ const { t } = useI18n()
           class="icon-btn mx-2 inline-flex items-center space-x-1"
           to="/sort-by-key"
         >
-          <span>Sorting by key</span>
+          <span>Practical sort by object key value</span>
         </router-link>
       </li>
       <li class="cursor-pointer">
@@ -63,30 +63,13 @@ const { t } = useI18n()
           class="icon-btn mx-2 inline-flex items-center space-x-1"
           to="/search-by-key"
         >
-          <span>Advice Slip</span>
+          <span>Vue-query and vue-useMotion</span>
         </router-link>
       </li>
     </ul>
     <div class="py-4" />
 
-    <input
-      id="input"
-      v-model="name"
-      :placeholder="t('intro.whats-your-name')"
-      :aria-label="t('intro.whats-your-name')"
-      type="text"
-      autocomplete="false"
-      class="px-4 py-2 w-[250px] text-center bg-transparent border rounded border-gray-200 dark:border-gray-700 "
-
-      @keydown.enter="go"
-    />
-    <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
-
-    <div>
-      <button class="m-3 text-sm btn" :disabled="!name" @click="go">
-        {{ t('button.go') }}
-      </button>
-    </div>
+   
   </div>
 </template>
 
