@@ -1,5 +1,5 @@
 ---
-title: Animate placeholder/label in input field
+title: Form validation using Vest, Vue 3 script setup
 ---
 
 <div class="text-center">
