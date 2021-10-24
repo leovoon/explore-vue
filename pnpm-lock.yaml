@@ -46,7 +46,6 @@ specifiers:
   vue-tsc: ^0.2.3
 
 dependencies:
-  '@types/validator': 13.6.5
   '@vueuse/core': 5.3.0_vue@3.2.20
   '@vueuse/head': 0.6.0_vue@3.2.20
   '@vueuse/motion': 2.0.0-beta.4_vue@3.2.20
@@ -68,6 +67,7 @@ devDependencies:
   '@iconify/json': 1.1.417
   '@intlify/vite-plugin-vue-i18n': 2.4.0_vite@2.6.10+vue-i18n@9.1.9
   '@types/nprogress': 0.2.0
+  '@types/validator': 13.6.5
   '@typescript-eslint/eslint-plugin': 4.33.0_eslint@7.32.0+typescript@4.4.4
   '@vitejs/plugin-vue': 1.9.3_vite@2.6.10
   '@vue/compiler-sfc': 3.2.20
@@ -1590,7 +1590,7 @@ packages:
 
   /@types/validator/13.6.5:
     resolution: {integrity: sha512-ilpDKpjjq/w/IyyTuQ38mABdaEzTzTugPyU7DlMCMKd8MMYngnPKhA2TgdO1MfEDED9KVV7uSOL1fDkgwJp/wg==}
-    dev: false
+    dev: true
 
   /@typescript-eslint/eslint-plugin/4.33.0_cc617358c89d3f38c52462f6d809db4c:
     resolution: {integrity: sha512-aINiAxGVdOl1eJyVjaWn/YcVAq4Gi/Yo35qHGCnqbWVz61g39D0h23veY/MA0rFFGfxK7TySg2uwDeNv+JgVpg==}
