@@ -108,7 +108,7 @@ label {
 }
 
 .pass-validate li {
-    @apply text-xs inline-flex items-center text-gray-300 dark:text-gray-400;
+    @apply text-xs inline-flex items-center text-gray-300;
 }
 .pass-validate li svg {
     @apply inline-block w-2 mr-2 text-gray-300;
