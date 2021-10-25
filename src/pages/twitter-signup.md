@@ -27,11 +27,11 @@ export default create((data = {}, changedField) => {
   only(changedField);
 
   test("name", "What's your name?", () => {
-    enforce(data.name).isNotBlank()
+    enforce(data.name).isNotEmpty()
   })
 
   test("email", "What is your email?", () => {
-    enforce(data.email).isNotBlank()
+    enforce(data.email).isNotEmpty()
   });
 
   test("email", "Please enter a valid email address.", () => {
