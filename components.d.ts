@@ -5,6 +5,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     AdviceSlip: typeof import('./src/components/AdviceSlip.vue')['default']
     'AkarIcons:arrowDownRight': typeof import('virtual:vite-icons/akar-icons/arrow-down-right')['default']
+    'AkarIcons:circle': typeof import('virtual:vite-icons/akar-icons/circle')['default']
+    'AkarIcons:circleFill': typeof import('virtual:vite-icons/akar-icons/circle-fill')['default']
+    'AkarIcons:eyeOpen': typeof import('virtual:vite-icons/akar-icons/eye-open')['default']
+    'AkarIcons:eyeSlashed': typeof import('virtual:vite-icons/akar-icons/eye-slashed')['default']
     CarbonDicomOverlay: typeof import('virtual:vite-icons/carbon/dicom-overlay')['default']
     CarbonLanguage: typeof import('virtual:vite-icons/carbon/language')['default']
     CarbonLogoGithub: typeof import('virtual:vite-icons/carbon/logo-github')['default']
@@ -16,6 +20,7 @@ declare module 'vue' {
     Footer: typeof import('./src/components/Footer.vue')['default']
     TngInput: typeof import('./src/components/TngInput.vue')['default']
     TwitterInput: typeof import('./src/components/TwitterInput.vue')['default']
+    W3sInput: typeof import('./src/components/w3sInput.vue')['default']
     WhhRoadsignright: typeof import('virtual:vite-icons/whh/roadsignright')['default']
   }
 }

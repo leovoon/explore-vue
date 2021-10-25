@@ -1,11 +1,11 @@
 ---
-title: Form validation using Vest, Vue 3 script setup
+title: Form validation using Vest, Vue 3 script setup Part 1
 ---
 
 <div class="text-center">
   <!-- You can use Vue components inside markdown -->
   <carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
-  <h3>Form validation using Vest</h3>
+  <h3>Form validation using Vest Part 1</h3>
 
 </div>
 Super easy form validation!

@@ -55,7 +55,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import suite from '~/logic/validation'
 import classNames from "vest/classNames";
 
@@ -65,8 +65,7 @@ const { name, email, res } = toRefs(state)
 
 const classes = computed(() => classNames(res.value, { invalid: "invalid" }))
 
-const validateForm = (field: string) => res.value = suite({ name: name.value, email: email.value }, field)
-
+const validateForm = (field: string) => res.value = suite({ name: name, email: email }, field)
 </script>
 
 

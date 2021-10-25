@@ -27,7 +27,7 @@ export default defineConfig({
               'fontWeight': '500',
               'textDecoration': 'underline',
               '&:hover': {
-                opacity: 1,
+                opacity: 0,
                 color: colors.teal[600],
               },
             },
