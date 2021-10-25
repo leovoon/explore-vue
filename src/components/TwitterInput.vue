@@ -65,7 +65,7 @@ const { name, email, res } = toRefs(state)
 
 const classes = computed(() => classNames(res.value, { invalid: "invalid" }))
 
-const validateForm = (field: string) => res.value = suite({ name: name, email: email }, field)
+const validateForm = (field: string) => res.value = suite({ name: name.value, email: email.value }, field)
 </script>
 
 
