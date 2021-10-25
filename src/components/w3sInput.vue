@@ -1,18 +1,18 @@
 <template>
-    <div class="rounded-lg sm:border sm:border-gray-400 p-2 space-y-2">
+    <div class="rounded-lg sm:border sm:border-gray-400 sm:p-4 space-y-2 max-w-md">
         <p class="form-title text-lg font-bold">Sign Up</p>
 
         <div class="flex items-center justify-between">
             <label for="Password">Password</label>
             <button class="password-toggle" @click="togglePassword()">
-                <div v-show="isShow">
+                <div v-show="isShow" class="space-x-1">
                     <akar-icons:eye-slashed class="inline-block" />
+                    <span>Hidden</span>
                 </div>
-                <div v-show="!isShow">
+                <div v-show="!isShow" class="space-x-1">
                     <akar-icons:eye-open class="inline-block" />
+                    <span>Show</span>
                 </div>
-
-                <span>Show</span>
             </button>
         </div>
         <input
