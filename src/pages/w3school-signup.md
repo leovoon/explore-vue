@@ -52,8 +52,8 @@ const { password, res } = toRefs(formData)
 const validateForm = (field: string) => res.value = suite({ password: password.value }, field)
 const tests = ['One lowercase character', 'One uppercase character', 'One number', 'One special character', '8 characters minimum']
 
-const checkPassed = (errors: string[], test: string) => !errors.includes(test) && '!text-gray-800'
-const checkPassedIcon = (errors: string[], test: string) => !errors.includes(test) && '!text-green-500'
+const checkPassedIcon = (errors: string[], test: string) => !errors.includes(test) ? 'text-green-500 dark:text-green-500' : 'text-gray-300 dark:text-gray-300'
+const checkPassed = (errors: string[], test: string) => !errors.includes(test) ? 'text-gray-800 dark:text-green-500' : 'text-gray-300 dark:text-gray-300'
 
 const togglePassword = () => {
     isShow.value = !isShow.value
@@ -94,9 +94,9 @@ const togglePassword = () => {
             name="password"
         />
         <div class="pass-validate">
-            <li v-for="test in tests" :class="checkPassed(res.getErrors('password'), test)">
+            <li v-for="test in tests" >
                 <akar-icons:circle-fill :class="checkPassedIcon(res.getErrors('password'), test)" />
-                {{ test }}
+                <span :class="checkPassed(res.getErrors('password'), test)">{{ test }}</span>
             </li>
         </div>
 
@@ -129,10 +129,10 @@ label {
 }
 
 .pass-validate li {
-    @apply text-xs inline-flex items-center text-gray-300 dark:text-gray-400;
+    @apply text-xs inline-flex items-center;
 }
 .pass-validate li svg {
-    @apply inline-block w-2 mr-2 text-gray-300;
+    @apply inline-block w-2 mr-2;
 }
 .sign-up {
     @apply p-3 text-center w-full bg-green-500 font-semibold text-lg rounded-full text-white;
