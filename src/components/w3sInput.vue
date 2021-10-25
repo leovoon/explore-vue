@@ -7,7 +7,7 @@
             <button class="password-toggle" @click="togglePassword()">
                 <div v-show="isShow" class="space-x-1">
                     <akar-icons:eye-slashed class="inline-block" />
-                    <span>Hidden</span>
+                    <span>Hide</span>
                 </div>
                 <div v-show="!isShow" class="space-x-1">
                     <akar-icons:eye-open class="inline-block" />
