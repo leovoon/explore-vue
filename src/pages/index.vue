@@ -47,7 +47,15 @@ const { t } = useI18n()
           class="icon-btn mx-2 inline-flex items-center space-x-1"
           to="/twitter-signup"
         >
-          <span> Form validation using Vest </span>
+          <span> Form validation using Vest Part 1</span>
+        </router-link>
+      </li>
+      <li class="cursor-pointer">
+        <router-link
+          class="icon-btn mx-2 inline-flex items-center space-x-1"
+          to="/w3school-signup"
+        >
+          <span> Form validation using Vest Part 2</span>
         </router-link>
       </li>
       <li class="cursor-pointer">
