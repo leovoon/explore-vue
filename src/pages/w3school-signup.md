@@ -46,7 +46,7 @@ const suite = create((formData, changedField) => {
 });
 
 const isShow = ref(false)
-const inputType = ref('')
+const inputType = ref('password')
 const formData = reactive({ password: '', res: suite.get() })
 const { password, res } = toRefs(formData)
 const validateForm = (field: string) => res.value = suite({ password: password.value }, field)
