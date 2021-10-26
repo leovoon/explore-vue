@@ -63,6 +63,9 @@ const suite = create((formData, changedField) => {
     });
 });
 
+
+
+
 const isShow = ref(false)
 const inputType = ref('password')
 const formData = reactive({ password: '', res: suite.get() })

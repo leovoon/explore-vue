@@ -1,5 +1,5 @@
 ---
-title: Search data by calling from api
+title: Search data by calling from API
 ---
 
 <div class="text-center mb-8">

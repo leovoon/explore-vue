@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+// import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import ListLink from '~/components/ListLink.vue';
 
-const name = ref('')
-const router = useRouter()
-const go = () => {
-  if (name.value) router.push(`/hi/${encodeURIComponent(name.value)}`)
-}
+// const name = ref('')
+// const router = useRouter()
+// const go = () => {
+//   if (name.value) router.push(`/hi/${encodeURIComponent(name.value)}`)
+// }
 
 const { t } = useI18n()
 
@@ -34,51 +35,15 @@ const { t } = useI18n()
 
     <ul class="list-none flex flex-col justify-center  items-center">
       #frontend practice
-      <li class="cursor-pointer">
-        <router-link
-          class="icon-btn mx-2 inline-flex items-center space-x-1"
-          to="/atm-input"
-        >
-          <span> Vmoney atm-liked input </span>
-        </router-link>
-      </li>
-      <li class="cursor-pointer">
-        <router-link
-          class="icon-btn mx-2 inline-flex items-center space-x-1"
-          to="/twitter-signup"
-        >
-          <span> Form validation using Vest Part 1</span>
-        </router-link>
-      </li>
-      <li class="cursor-pointer">
-        <router-link
-          class="icon-btn mx-2 inline-flex items-center space-x-1"
-          to="/w3school-signup"
-        >
-          <span> Form validation using Vest Part 2</span>
-        </router-link>
-      </li>
-      <li class="cursor-pointer">
-        <router-link
-          class="icon-btn mx-2 inline-flex items-center space-x-1"
-          to="/sort-by-key"
-        >
-          <span>Practical sort by object key value</span>
-        </router-link>
-      </li>
-      <li class="cursor-pointer">
-        <router-link
-          class="icon-btn mx-2 inline-flex items-center space-x-1"
-          to="/search-by-key"
-        >
-          <span>Vue-query and vue-useMotion</span>
-        </router-link>
-      </li>
+      <list-link path="/atm-input">vmoney atm-liked input</list-link>
+      <list-link path="/twitter-signup">Form validation using Vest Part 1</list-link>
+      <list-link path="/w3school-signup">Form validation using Vest Part 2</list-link>
+      <list-link path="/sort-by-key">Practical sorting by object key value</list-link>
+      <list-link path="/search-by-key">vue-query and vueuse-motion</list-link>
+      <list-link path="/reusable-components">Making reusable-components using Slot</list-link>
+      
     </ul>
-    <div class="py-4" />
-
-   
-  </div>
+    </div>
 </template>
 
 <route lang="yaml">
