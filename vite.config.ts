@@ -67,7 +67,6 @@ export default defineConfig({
         // https://github.com/antfu/vite-plugin-icons
         ViteIconsResolver({
           componentPrefix: '',
-          // enabledCollections: ['carbon']
         }),
       ],
     }),
@@ -134,7 +133,7 @@ export default defineConfig({
       'vue',
       'vue-router',
       '@vueuse/core',
-      
+
     ],
     exclude: [
       'vue-demi',
