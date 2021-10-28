@@ -8,8 +8,8 @@
     <slot name="buttons">
       <button v-for="d in data" :key="d.first">
         <slot name="mode1" :mode="` ${d.first} ${d.last}`"></slot>
-        <slot name="mode2" :mode="` ${d.prefix} ${d.first} ${d.last}` "></slot>
-        <slot name="mode3" :mode="` ${d.first}` "></slot>
+        <slot name="mode2" :mode="` ${d.first}` "></slot>
+        <slot name="mode3" :mode="` ${d.prefix} ${d.first} ${d.last}` "></slot>
       </button>
     </slot>
   </div>
