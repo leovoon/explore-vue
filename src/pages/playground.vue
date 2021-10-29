@@ -96,7 +96,7 @@ const breakpoints = useBreakpoints({
   desktop: 1280,
 })
 
-const laptop = breakpoints.between('laptop', 'desktop')
+const laptop = breakpoints.isGreater('tablet')
 const selected = ref('loginOnly')
 const checked = ref(true)
 const checkShowPicture = computed(() => !checked.value ? 'noPicture' : '')
