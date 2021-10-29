@@ -25,59 +25,46 @@
         </user-card-list>
       </template>
       <template #loading>
-        <div v-if="!laptop">
+        <div class="mt-10">
           <content-loader
-            :width="300"
+            :width="windowWidth"
             :height="300"
             :speed="1"
-            class="w-full pt-10 m-2"
-            primary-color="#f3f3f3"
-            secondary-color="#ecebeb"
+            class=""
+            :primary-color=" isDark ? '#4e586d' : '#f3f3f3'"
+            :secondary-color="isDark ? '#2e3440' : '#ecebeb'"
           >
             <rect
-              x="0"
-              y="210"
-              rx="5"
-              ry="5"
-              width="400"
-              height="10"
-            />
-            <rect
-              x="0"
+              x="20"
               y="0"
-              rx="5"
-              ry="5"
-              width="400"
-              height="200"
-            />
-          </content-loader>
-        </div>
-        <div v-else class="flex flex-wrap">
-          <content-loader
-            v-for="loader in 3"
-            :key="loader"
-            :width="300"
-            :height="300"
-            :speed="1"
-            class="inline-block pt-10 m-2"
-            primary-color="#f3f3f3"
-            secondary-color="#ecebeb"
-          >
-            <rect
-              x="0"
-              y="210"
-              rx="5"
-              ry="5"
-              width="400"
-              height="10"
+              rx="0"
+              ry="0"
+              width="170"
+              height="180"
             />
             <rect
-              x="0"
+              x="22"
+              y="200"
+              rx="0"
+              ry="0"
+              width="86"
+              height="15"
+            />
+            <rect
+              x="220"
               y="0"
-              rx="5"
-              ry="5"
-              width="400"
-              height="200"
+              rx="0"
+              ry="0"
+              width="170"
+              height="180"
+            />
+            <rect
+              x="222"
+              y="200"
+              rx="0"
+              ry="0"
+              width="86"
+              height="15"
             />
           </content-loader>
         </div>
@@ -88,15 +75,10 @@
 
 <script lang="ts" setup>
 import { ContentLoader } from 'vue-content-loader'
-import { useBreakpoints } from '@vueuse/core'
+import { useDark, useWindowSize } from '@vueuse/core'
 
-const breakpoints = useBreakpoints({
-  tablet: 640,
-  laptop: 1024,
-  desktop: 1280,
-})
-
-const laptop = breakpoints.isGreater('tablet')
+const isDark = useDark()
+const { width: windowWidth } = useWindowSize()
 const selected = ref('loginOnly')
 const checked = ref(true)
 const checkShowPicture = computed(() => !checked.value ? 'noPicture' : '')
