@@ -16,7 +16,7 @@ const close = async() => {
 <template>
   <div
     v-if="offlineReady || needRefresh"
-    class="pwa-toast"
+    class="pwa-toast dark:text-gray-800"
     role="alert"
   >
     <div class="message">
@@ -59,5 +59,6 @@ const close = async() => {
   margin-right: 5px;
   border-radius: 2px;
   padding: 3px 10px;
+  @apply bg-green-200 dark:bg-green-600 dark:text-light-300;
 }
 </style>

@@ -2,10 +2,10 @@
 import { useHead } from '@vueuse/head'
 import { useQueryProvider } from 'vue-query'
 import { defineAsyncComponent } from 'vue'
-const ClientReloadPrompt = typeof 'window' !== undefined
+// eslint-disable-next-line no-constant-condition
+const AsyncReloadPrompt = typeof 'window' !== 'undefined'
   ? defineAsyncComponent(() => import('~/components/AsyncReloadPrompt.vue'))
   : null
-
 useQueryProvider()
 
 // https://github.com/vueuse/head
@@ -20,8 +20,8 @@ useHead({
 </script>
 
 <template>
-  <template v-if="ClientReloadPrompt">
-    <ClientReloadPrompt />
-  </template>
-  <router-view></router-view>
+  <router-view />
+  <ClientOnly>
+    <AsyncReloadPrompt />
+  </ClientOnly>
 </template>

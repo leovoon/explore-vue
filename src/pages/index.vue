@@ -1,7 +1,8 @@
 <script setup lang="ts">
 // import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import ListLink from '~/components/ListLink.vue';
+import ListLink from '~/components/ListLink.vue'
+// eslint-disable-next-line no-constant-condition
 
 // const name = ref('')
 // const router = useRouter()
@@ -10,7 +11,6 @@ import ListLink from '~/components/ListLink.vue';
 // }
 
 const { t } = useI18n()
-
 
 </script>
 
@@ -35,15 +35,26 @@ const { t } = useI18n()
 
     <ul class="list-none flex flex-col justify-center  items-center">
       #frontend practice
-      <list-link path="/atm-input">vmoney atm-liked input</list-link>
-      <list-link path="/twitter-signup">Form validation using Vest Part 1</list-link>
-      <list-link path="/w3school-signup">Form validation using Vest Part 2</list-link>
-      <list-link path="/sort-by-key">Practical sorting by object key value</list-link>
-      <list-link path="/search-by-key">vue-query and vueuse-motion</list-link>
-      <list-link path="/reusable-components">Making reusable-components using Slot</list-link>
-      
+      <list-link path="/atm-input">
+        vmoney atm-liked input
+      </list-link>
+      <list-link path="/twitter-signup">
+        Form validation using Vest Part 1
+      </list-link>
+      <list-link path="/w3school-signup">
+        Form validation using Vest Part 2
+      </list-link>
+      <list-link path="/sort-by-key">
+        Practical sorting by object key value
+      </list-link>
+      <list-link path="/search-by-key">
+        vue-query and vueuse-motion
+      </list-link>
+      <list-link path="/reusable-components">
+        Making reusable-components using Slot
+      </list-link>
     </ul>
-    </div>
+  </div>
 </template>
 
 <route lang="yaml">
