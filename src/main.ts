@@ -15,9 +15,6 @@ import 'virtual:windi-utilities.css'
 // windicss devtools support (dev only)
 import 'virtual:windi-devtools'
 
-if (typeof window !== 'undefined')
-  import('./pwa')
-
 const routes = setupLayouts(generatedRoutes)
 
 // https://github.com/antfu/vite-ssg
