@@ -5,12 +5,14 @@
         <div class="card">
           <slot name="noPicture">
             <img
+              v-if="item.avatar_url"
               v-motion-pop
               :delay="200"
               class="responsive"
               :src="item.avatar_url"
               :alt="item.login"
             />
+            <img v-else class="fallback-img" width="30" height="30" />
           </slot>
 
           <slot name="picture-only">
@@ -77,5 +79,13 @@ const props = defineProps({
 }
 .card-body {
   padding: 1rem;
+}
+.fallback-image {
+  width: 30px;
+  height: 30px;
+  background: rgb(136, 136, 136);
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
 }
 </style>

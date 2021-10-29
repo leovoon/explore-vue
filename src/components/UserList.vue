@@ -4,7 +4,10 @@
     <slot v-if="!isFetching" name="userlist" :list="data">
       <ul>
         <li v-for="d in data" :key="d.id">
-          <img width="48" height="48" class="rounded-full" :src="d.avatar_url" :alt="d.login">
+          <img width="30" height="30" class="rounded-full" :src="d.avatar_url" :alt="d.login">
+          <img v-if="d.avatar_url" :src="d.avatar.url" />
+          <img v-else class="fallback-img" width="30" height="30" />
+
           <div class="flex flex-col items-start">
             <span class="ml-2">{{ d.login }}</span>
             {{ props.secondRow(d) }}
@@ -12,13 +15,12 @@
         </li>
       </ul>
     </slot>
-    <slot v-else-if="error" name="error">
+
+    <slot v-if="error" name="error">
       {{ error }}
     </slot>
-    <slot v-else name="loading">
-      <div class="loader">
-        Loading...
-      </div>
+    <slot v-if="isFetching" name="loading">
+      Loading...
     </slot>
   </div>
 </template>
@@ -28,28 +30,7 @@ import { useFetch } from '@vueuse/core'
 
 const url = 'https://api.github.com/users'
 
-interface User {
-  login: string
-  id: number
-  node_id: string
-  avatar_url: string
-  gravatar_id: string
-  url: string
-  html_url: string
-  followers_url: string
-  following_url: string
-  gists_url: string
-  starred_url: string
-  subscriptions_url: string
-  organizations_url: string
-  repos_url: string
-  events_url: string
-  received_events_url: string
-  type: string
-  site_admin: boolean
-}
-
-const { data , isFetching, error } = useFetch(url).get().json()
+const { data, isFetching, error } = useFetch(url, { refetch: false }).get().json()
 
 const props = defineProps({
   secondRow: {

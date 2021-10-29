@@ -25,26 +25,80 @@
         </user-card-list>
       </template>
       <template #loading>
-        <svg class="animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-          <circle
-            class="opacity-25"
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            stroke-width="4"
-          ></circle>
-          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8z"></path>
-        </svg>
+        <div v-if="!laptop">
+          <content-loader
+            :width="300"
+            :height="300"
+            :speed="1"
+            class="w-full pt-10 m-2"
+            primary-color="#f3f3f3"
+            secondary-color="#ecebeb"
+          >
+            <rect
+              x="0"
+              y="210"
+              rx="5"
+              ry="5"
+              width="400"
+              height="10"
+            />
+            <rect
+              x="0"
+              y="0"
+              rx="5"
+              ry="5"
+              width="400"
+              height="200"
+            />
+          </content-loader>
+        </div>
+        <div v-else class="flex flex-wrap">
+          <content-loader
+            v-for="loader in 3"
+            :key="loader"
+            :width="300"
+            :height="300"
+            :speed="1"
+            class="inline-block pt-10 m-2"
+            primary-color="#f3f3f3"
+            secondary-color="#ecebeb"
+          >
+            <rect
+              x="0"
+              y="210"
+              rx="5"
+              ry="5"
+              width="400"
+              height="10"
+            />
+            <rect
+              x="0"
+              y="0"
+              rx="5"
+              ry="5"
+              width="400"
+              height="200"
+            />
+          </content-loader>
+        </div>
       </template>
     </user-list>
   </div>
 </template>
 
 <script lang="ts" setup>
-import UserList from '~/components/UserList.vue'
+import { ContentLoader } from 'vue-content-loader'
+import { useBreakpoints } from '@vueuse/core'
+
+const breakpoints = useBreakpoints({
+  tablet: 640,
+  laptop: 1024,
+  desktop: 1280,
+})
+
+const laptop = breakpoints.between('laptop', 'desktop')
 const selected = ref('loginOnly')
-const checked = ref(false)
+const checked = ref(true)
 const checkShowPicture = computed(() => !checked.value ? 'noPicture' : '')
 const options = [
   { mode: 'loginOnly', label: 'Username only' }, { mode: 'loginAndType', label: 'User type + Username' }, { mode: 'loginId', label: 'User Id only' }]

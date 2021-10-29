@@ -39,6 +39,7 @@ specifiers:
   vite-plugin-windicss: ^1.4.12
   vite-ssg: ^0.12.0
   vue: ^3.2.20
+  vue-content-loader: ^2.0.0
   vue-demi: ^0.11.4
   vue-global-api: ^0.2.4
   vue-i18n: ^9.1.9
@@ -58,6 +59,7 @@ dependencies:
   validator: 13.6.0
   vest: 3.2.7
   vue: 3.2.20
+  vue-content-loader: 2.0.0_vue@3.2.20
   vue-demi: 0.11.4_vue@3.2.20
   vue-global-api: 0.2.4_vue@3.2.20
   vue-i18n: 9.1.9_vue@3.2.20
@@ -6023,6 +6025,14 @@ packages:
       vscode-pug-languageservice: 0.27.24
       vscode-typescript-languageservice: 0.27.25
     dev: true
+
+  /vue-content-loader/2.0.0_vue@3.2.20:
+    resolution: {integrity: sha512-4HtRASF3y1S03pcilwneVZzbowwKyDBfsPzP2JE35RMDIjsPuGnr93nO/2kP4mmqP4Qwmw6uCPd3SHBgJAi8Bw==}
+    peerDependencies:
+      vue: ^3
+    dependencies:
+      vue: 3.2.20
+    dev: false
 
   /vue-demi/0.10.1_vue@3.2.20:
     resolution: {integrity: sha512-L6Oi+BvmMv6YXvqv5rJNCFHEKSVu7llpWWJczqmAQYOdmPPw5PNYoz1KKS//Fxhi+4QP64dsPjtmvnYGo1jemA==}
