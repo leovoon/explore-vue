@@ -1,5 +1,3 @@
-import { registerSW } from 'virtual:pwa-register'
+import { useRegisterSW } from 'virtual:pwa-register/vue'
 
-registerSW({
-  onOfflineReady() {},
-})
+useRegisterSW()
