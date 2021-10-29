@@ -1,7 +1,7 @@
 <template>
   <slot>
     <div class="block m-3">
-      Different style of username presentation
+      (scoped slot: slotprops)
     </div>
   </slot>
   <div class="flex flex-wrap justify-start items-start">

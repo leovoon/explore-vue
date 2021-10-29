@@ -4,21 +4,37 @@
 
     <select v-model="selected">
       <option v-for="option in options" :key="option.mode" :value="option.mode">
-        {{ option.label }}
+        Showing {{ option.label }}
       </option>
     </select>
-    <app-button3>
-      <template #[selected]="{mode}">
-        {{ mode }}
+    <div class="space-x-4">
+      <label for="picture">Show Picture?</label>
+      <input v-model="checked" name="picture" type="checkbox">
+      <span>{{ checked }}</span>
+    </div>
+
+    <user-list>
+      <template #userlist="{list}">
+        <user-card-list :list="list">
+          <template #[checkShowPicture]>
+            {{ }}
+          </template>
+          <template #[selected]="{item}">
+            {{ item }}
+          </template>
+        </user-card-list>
       </template>
-    </app-button3>
+    </user-list>
   </div>
 </template>
 
 <script lang="ts" setup>
-const selected = ref('mode1')
+import UserList from '~/components/UserList.vue'
+const selected = ref('loginOnly')
+const checked = ref(false)
+const checkShowPicture = computed(() => !checked.value ? 'noPicture' : '')
 const options = [
-  { mode: 'mode1', label: 'Full name only' }, { mode: 'mode2', label: 'First name only' }, { mode: 'mode3', label: 'Full name with alphabetizing titles' }]
+  { mode: 'loginOnly', label: 'Username only' }, { mode: 'loginAndType', label: 'User type + Username' }, { mode: 'loginId', label: 'User Id only' }]
 </script>
 
 <route lang="yaml">
@@ -28,10 +44,7 @@ meta:
 
 <style scoped>
 select {
-  @apply min-w-max rounded-full m-4 px-4 py-1 border appearance-none bg-transparent
+  @apply min-w-max rounded-full m-4 px-4 py-1 border appearance-none dark:bg-green-700
 }
 
-caret {
-  @apply absolute right-0 top-0
-}
 </style>
