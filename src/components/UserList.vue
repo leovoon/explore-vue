@@ -1,7 +1,7 @@
 <template>
   <div class="py-4">
     (scoped slot: sending props from child to parent)
-    <slot v-if="isFetching" name="userlist" :list="data">
+    <slot v-if="!isFetching" name="userlist" :list="data">
       <ul>
         <li v-for="d in data" :key="d.id">
           <img width="30" height="30" class="rounded-full" :src="d.avatar_url" :alt="d.login">
@@ -19,7 +19,7 @@
     <slot v-if="error" name="error">
       {{ error }}
     </slot>
-    <slot v-if="!isFetching" name="loading">
+    <slot v-if="isFetching" name="loading">
       Loading...
     </slot>
   </div>
