@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex flex-col items-center justify-center">
-    <h1>Playground</h1>
+    <h1>Playgroundd</h1>
 
     <select v-model="selected">
       <option v-for="option in options" :key="option.mode" :value="option.mode">

@@ -5,11 +5,6 @@ declare module 'vue' {
   export interface GlobalComponents {
     AdviceSlip: typeof import('./src/components/AdviceSlip.vue')['default']
     'AkarIcons:arrowDownRight': typeof import('virtual:vite-icons/akar-icons/arrow-down-right')['default']
-    'AkarIcons:circleFill': typeof import('virtual:vite-icons/akar-icons/circle-fill')['default']
-    'AkarIcons:eyeOpen': typeof import('virtual:vite-icons/akar-icons/eye-open')['default']
-    'AkarIcons:eyeSlashed': typeof import('virtual:vite-icons/akar-icons/eye-slashed')['default']
-    'AkarIcons:heart': typeof import('virtual:vite-icons/akar-icons/heart')['default']
-    'AntDesign:caretDownFilled': typeof import('virtual:vite-icons/ant-design/caret-down-filled')['default']
     AppButton: typeof import('./src/components/AppButton.vue')['default']
     AppButton2: typeof import('./src/components/AppButton2.vue')['default']
     AppButton3: typeof import('./src/components/AppButton3.vue')['default']
