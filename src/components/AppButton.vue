@@ -1,15 +1,14 @@
 <template>
-    <button>
-        <slot>{{ text }}</slot>
-    </button>
+  <button>
+    <slot>{{ text }}</slot>
+  </button>
 </template>
 
 <script lang='ts' setup>
-const props = defineProps(['text']);
+const props = defineProps(['text'])
 
 const { text } = props
 </script>
-
 
 <style scoped>
 button {

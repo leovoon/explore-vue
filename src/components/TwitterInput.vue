@@ -15,17 +15,19 @@
       </svg>
     </div>
     <div class="w-full flex flex-col justify-center items-stretch space-y-8">
-      <h4 class="self-start font-bold text-2xl">Create your account</h4>
+      <h4 class="self-start font-bold text-2xl">
+        Create your account
+      </h4>
 
-      <div class="inputWrapperStyle" :class="classes('name')">
+      <div class="inputWrapperStyle group" :class="classes('name')">
         <input
           id="name"
           v-model="name"
           type="text"
           placeholder=" "
           maxlength="50"
-          @input="validateForm('name')"
           class="inputStyle"
+          @input="validateForm('name')"
         />
 
         <label for="name" class="labelStyle">Name</label>
@@ -41,8 +43,8 @@
           v-model="email"
           type="text"
           placeholder=" "
-          @input="validateForm('email')"
           class="inputStyle"
+          @input="validateForm('email')"
         />
         <label for="email" class="labelStyle">Email</label>
         <span class="absolute text-xs text-red-500">{{ [...res.getErrors('email')][0] }}</span>
@@ -51,27 +53,28 @@
     <button
       :disabled="!res.isValid()"
       class="mt-14 w-full rounded-full py-2 text-sm font-semibold text-white bg-light-blue-500"
-    >Next</button>
+    >
+      Next
+    </button>
   </div>
 </template>
 
 <script lang="ts" setup>
+import classNames from 'vest/classNames'
 import suite from '~/logic/validation'
-import classNames from "vest/classNames";
 
 const state = reactive({ name: '', email: '', res: suite.get() })
 
 const { name, email, res } = toRefs(state)
 
-const classes = computed(() => classNames(res.value, { invalid: "invalid" }))
+const classes = computed(() => classNames(res.value, { invalid: 'invalid' }))
 
 const validateForm = (field: string) => res.value = suite({ name: name.value, email: email.value }, field)
 </script>
 
-
 <style scoped>
 .inputWrapperStyle {
-  @apply relative group border dark:border-dark-50 rounded dark:text-gray-500 focus-within:(border-light-blue-500 text-light-blue-500 dark:text-light-blue-500);
+  @apply relative border dark:border-dark-50 rounded dark:text-gray-500 focus-within:(border-light-blue-500 text-light-blue-500 dark:text-light-blue-500);
 }
 .inputStyle {
   @apply px-2 pt-6 pb-2 rounded  dark:text-white text-dark-200 leading-6  block w-full appearance-none focus:outline-none bg-transparent;

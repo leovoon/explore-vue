@@ -1,16 +1,19 @@
 <template>
-    <button>
-        <slot name="icon"> <akar-icons:heart class="inline-block" /> </slot>
-        <slot name="default">{{ text }}</slot>
-    </button>
+  <button>
+    <slot name="icon">
+      <akar-icons:heart class="inline-block" />
+    </slot>
+    <slot name="default">
+      {{ text }}
+    </slot>
+  </button>
 </template>
 
 <script lang='ts' setup>
-const props = defineProps(['text']);
+const props = defineProps(['text'])
 
 const { text } = props
 </script>
-
 
 <style scoped>
 button {

@@ -1,70 +1,71 @@
 <template>
-    <div class="rounded-lg sm:border sm:border-gray-400 sm:p-4 space-y-2 max-w-md">
-        <p class="form-title text-lg font-bold">Sign Up</p>
+  <div class="rounded-lg sm:border sm:border-gray-400 sm:p-4 space-y-2 max-w-md">
+    <p class="form-title text-lg font-bold">
+      Sign Up
+    </p>
 
-        <div class="flex items-center justify-between">
-            <label for="Password">Password</label>
-            <button class="password-toggle" @click="togglePassword()">
-                <div v-show="isShow" class="space-x-1">
-                    <akar-icons:eye-slashed class="inline-block" />
-                    <span>Hide</span>
-                </div>
-                <div v-show="!isShow" class="space-x-1">
-                    <akar-icons:eye-open class="inline-block" />
-                    <span>Show</span>
-                </div>
-            </button>
+    <div class="flex items-center justify-between">
+      <label for="Password">Password</label>
+      <button class="password-toggle" @click="togglePassword()">
+        <div v-show="isShow" class="min-w-12 flex justify-between items-center">
+          <akar-icons:eye-slashed class="inline-block" />
+          <span>Hide</span>
         </div>
-        <input
-            :type="inputType"
-            @input="validateForm('password')"
-            v-model="password"
-            name="password"
-        />
-        <div class="pass-validate">
-            <li v-for="test in tests" >
-                <akar-icons:circle-fill :class="checkPassedIcon(res.getErrors('password'), test)" />
-                <span :class="checkPassed(res.getErrors('password'), test)">{{ test }}</span>
-            </li>
+        <div v-show="!isShow" class="min-w-12 flex justify-between items-center">
+          <akar-icons:eye-open class="inline-block" />
+          <span>Show</span>
         </div>
-
-        <button :disabled="!res.isValid()" class="sign-up">Sign up for free</button>
+      </button>
     </div>
+    <input
+      v-model="password"
+      :type="inputType"
+      name="password"
+      @input="validateForm('password')"
+    />
+    <div class="pass-validate">
+      <li v-for="( test, idx) in tests" :key="idx">
+        <akar-icons:circle-fill :class="checkPassedIcon(res.getErrors('password'), test)" />
+        <span :class="checkPassed(res.getErrors('password'), test)">{{ test }}</span>
+      </li>
+    </div>
+
+    <button :disabled="!res.isValid()" class="sign-up">
+      Sign up for free
+    </button>
+  </div>
 </template>
 
 <script lang='ts' setup>
-import { create, test, enforce, only } from 'vest';
+import { create, test, enforce, only } from 'vest'
 
 const suite = create((formData, changedField) => {
-    only(changedField)
-    test('password', 'One lowercase character', () => {
-        enforce(formData.password)
-            .matches(/(?=.*?[a-z])/);
-    });
+  only(changedField)
+  test('password', 'One lowercase character', () => {
+    enforce(formData.password)
+      .matches(/(?=.*?[a-z])/)
+  })
 
-    test('password', 'One uppercase character', () => {
-        enforce(formData.password)
-            .matches(/(?=.*?[A-Z])/);
-    });
+  test('password', 'One uppercase character', () => {
+    enforce(formData.password)
+      .matches(/(?=.*?[A-Z])/)
+  })
 
-    test('password', 'One number', () => {
-        enforce(formData.password)
-            .matches(/(?=.*?[0-9])/);
-    });
+  test('password', 'One number', () => {
+    enforce(formData.password)
+      .matches(/(?=.*?[0-9])/)
+  })
 
-    test('password', 'One special character', () => {
-        enforce(formData.password)
-            .matches(/(?=.*?[#?!@$ %^&*-])/);
-    });
+  test('password', 'One special character', () => {
+    enforce(formData.password)
+      .matches(/(?=.*?[#?!@$ %^&*-])/)
+  })
 
-    test('password', '8 characters minimum', () => {
-        enforce(formData.password)
-            .matches(/.{8,}/);
-    });
-});
-
-
-
+  test('password', '8 characters minimum', () => {
+    enforce(formData.password)
+      .matches(/.{8,}/)
+  })
+})
 
 const isShow = ref(false)
 const inputType = ref('password')
@@ -77,14 +78,13 @@ const checkPassedIcon = (errors: string[], test: string) => !errors.includes(tes
 const checkPassed = (errors: string[], test: string) => !errors.includes(test) ? 'text-gray-800 dark:text-green-500' : 'text-gray-300 dark:text-gray-300'
 
 const togglePassword = () => {
-    isShow.value = !isShow.value
-    if (isShow.value) {
-        inputType.value = 'text'
-    } else {
-        inputType.value = 'password'
-    }
-}
+  isShow.value = !isShow.value
+  if (isShow.value)
+    inputType.value = 'text'
 
+  else
+    inputType.value = 'password'
+}
 
 </script>
 
@@ -102,7 +102,7 @@ label {
 }
 
 .password-toggle {
-    @apply inline-flex items-center space-x-1 text-xs font-semibold px-2;
+    @apply space-x-1 text-xs font-semibold px-2;
 }
 
 .pass-validate {
