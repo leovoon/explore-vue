@@ -3,7 +3,7 @@
     (scoped slot: sending props from child to parent)
     <slot v-if="!isFetching" name="userlist" :list="data">
       <ul>
-        <li v-for="d in data" :key="d.id">
+        <li v-for="d in data.slice(2)" :key="d.id">
           <img width="30" height="30" class="rounded-full" :src="d.avatar_url" :alt="d.login">
           <img v-if="d.avatar_url" :src="d.avatar.url" />
           <img v-else class="fallback-img" width="30" height="30" />
@@ -27,6 +27,7 @@
 
 <script setup lang='ts'>
 import { useFetch } from '@vueuse/core'
+// eslint-disable-next-line import/named
 
 const url = 'https://api.github.com/users'
 

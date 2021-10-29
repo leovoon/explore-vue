@@ -54,8 +54,9 @@ interface User {
 }
 const props = defineProps({
   list: {
-    type: Array as PropType<User[] | null>,
-    required: true,
+    type: Array as PropType<User[]>,
+    required: false,
+    default: null,
   },
 })
 </script>

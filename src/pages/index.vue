@@ -11,7 +11,6 @@ import ListLink from '~/components/ListLink.vue'
 // }
 
 const { t } = useI18n()
-
 </script>
 
 <template>
@@ -21,7 +20,7 @@ const { t } = useI18n()
     </p>
     <p>vueInFreeTime</p>
     <p>
-      <em class="text-sm opacity-75">{{ t('intro.desc') }}</em>
+      <em class="text-sm opacity-75">{{ t("intro.desc") }}</em>
     </p>
 
     <ul class="flex flex-col list-none my-4 space-y-2">
@@ -33,7 +32,7 @@ const { t } = useI18n()
       </li>
     </ul>
 
-    <ul class="list-none flex flex-col justify-center  items-center">
+    <ul class="list-none flex flex-col justify-center items-center">
       #frontend practice
       <list-link path="/atm-input">
         vmoney atm-liked input
