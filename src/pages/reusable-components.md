@@ -81,4 +81,43 @@ For each slot we wrap it in `template` following by `v-slot:name` **or** we can 
 
 and they will look exactly the same like  <app-button2><template v-slot:icon> 😊 </template> text passed to default slot </app-button2>
 
-That's all! 
+### Dynamic Scoped Slot
+
+Sometimes we may want to switch slots dynamically based on reactive data. SelectedItem is an example of reactive data.
+
+
+<demo >
+  <app-select :options="[{value: 'default'}, {value:'first'},{value: 'second'}]"/>
+</demo>
+
+
+```js
+// Parent.vue
+<template>
+  <child>
+   <template #[dynamicSlotName]="{ itemKey }">  // v-slot:[slotName]
+      {{ itemKey }}  // item.fullname / item.firstname
+   </template>
+   <template #default></template>
+  </child>
+</templte>
+
+<script setup>
+const dynamicSlotName = ref('default')
+</script>
+```
+
+```js
+// Child.vue
+<template>
+  <div v-for="item in items" :key="item.id">
+    // bind dynamic value of item as props to be passed to parent
+    <slot name="first" :itemKey="item.fullname"></slot> 
+    <slot name="second" :itemKey="item.firstname"></slot> 
+      // or  default slot
+    <slot name="default" :itemKey="item"></slot> 
+  </div>
+</templte>
+```
+
+Happy learning! 
