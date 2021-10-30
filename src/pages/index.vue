@@ -41,10 +41,10 @@ const { t } = useI18n()
         vmoney atm-liked input
       </list-link>
       <list-link path="/twitter-signup">
-        form validation using Vest Part 1
+        form validation using Vest part 1
       </list-link>
       <list-link path="/w3school-signup">
-        form validation using Vest Part 2
+        form validation using Vest part 2
       </list-link>
       <list-link path="/sort-by-key">
         practical sorting by object key value
@@ -53,7 +53,7 @@ const { t } = useI18n()
         vue-query and vueuse-motion
       </list-link>
       <list-link path="/reusable-components">
-        making reusable-components using Slot
+        making reusable components using vue slot
       </list-link>
     </ul>
   </div>
