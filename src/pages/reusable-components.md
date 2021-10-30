@@ -86,9 +86,8 @@ and they will look exactly the same like  <app-button2><template v-slot:icon> ðŸ
 Sometimes we may want to switch slots dynamically based on reactive data. SelectedItem is an example of reactive data.
 
 
-<demo >
+
   <app-select :options="[{value: 'default'}, {value:'first'},{value: 'second'}]"/>
-</demo>
 
 
 ```js

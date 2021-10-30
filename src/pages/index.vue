@@ -15,6 +15,7 @@ const { t } = useI18n()
 
 <template>
   <div>
+    <vue-logo class="vue-logo" />
     <p class="text-4xl">
       <whh-roadsignright class="inline-block" />
     </p>
@@ -32,29 +33,39 @@ const { t } = useI18n()
       </li>
     </ul>
 
-    <ul class="list-none flex flex-col justify-center items-center">
-      #frontend practice
+    <ul class="list-none text-left pl-2 space-y-1.2 ">
+      <span class="pl-2">
+        #frontend practice
+      </span>
       <list-link path="/atm-input">
         vmoney atm-liked input
       </list-link>
       <list-link path="/twitter-signup">
-        Form validation using Vest Part 1
+        form validation using Vest Part 1
       </list-link>
       <list-link path="/w3school-signup">
-        Form validation using Vest Part 2
+        form validation using Vest Part 2
       </list-link>
       <list-link path="/sort-by-key">
-        Practical sorting by object key value
+        practical sorting by object key value
       </list-link>
       <list-link path="/search-by-key">
         vue-query and vueuse-motion
       </list-link>
       <list-link path="/reusable-components">
-        Making reusable-components using Slot
+        making reusable-components using Slot
       </list-link>
     </ul>
   </div>
 </template>
+
+<style>
+.vue-logo {
+  @apply absolute scale-120 top-0 right-0 -z-99 opacity-20 transform translate-x-1/5  overflow-hidden;
+
+}
+
+</style>
 
 <route lang="yaml">
 meta:

@@ -1,5 +1,5 @@
 <template>
-  <li class="cursor-pointer">
+  <li class="cursor-pointer block group">
     <router-link
       class="icon-btn mx-2 inline-flex items-center space-x-1 visited:(text-green-900 dark:text-green-300)"
       :to="path"

@@ -29,6 +29,7 @@ declare module 'vue' {
     TwitterInput: typeof import('./src/components/TwitterInput.vue')['default']
     UserCardList: typeof import('./src/components/UserCardList.vue')['default']
     UserList: typeof import('./src/components/UserList.vue')['default']
+    VueLogo: typeof import('./src/components/VueLogo.vue')['default']
     W3sInput: typeof import('./src/components/w3sInput.vue')['default']
     WhhRoadsignright: typeof import('virtual:vite-icons/whh/roadsignright')['default']
   }
