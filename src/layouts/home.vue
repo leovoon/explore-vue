@@ -7,7 +7,7 @@
         Made with <span class="heart">
           ❤
         </span>
-        by leovoonn
+        by leovoon
       </p>
     </div>
   </main>
