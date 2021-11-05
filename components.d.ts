@@ -25,6 +25,7 @@ declare module 'vue' {
     Demo: typeof import('./src/components/Demo.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     ListLink: typeof import('./src/components/ListLink.vue')['default']
+    ProgressButton: typeof import('./src/components/ProgressButton.vue')['default']
     TngInput: typeof import('./src/components/TngInput.vue')['default']
     TwitterInput: typeof import('./src/components/TwitterInput.vue')['default']
     UserCardList: typeof import('./src/components/UserCardList.vue')['default']

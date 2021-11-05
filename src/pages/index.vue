@@ -53,7 +53,10 @@ const { t } = useI18n()
         vue-query and vueuse-motion
       </list-link>
       <list-link path="/reusable-components">
-        making reusable components using vue slot
+        making of reusable components using vue slot
+      </list-link>
+      <list-link path="/youtube-vote-button">
+        making of progressbar button component
       </list-link>
     </ul>
   </div>
