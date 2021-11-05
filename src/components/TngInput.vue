@@ -5,7 +5,7 @@
       <input
         v-model.lazy="amountShow"
         v-money="config"
-        type="number"
+        type="text"
         inputmode="numeric"
         maxlength="20"
       />
@@ -17,7 +17,7 @@
 <script lang="ts" setup>
 import { VMoney3 as vMoney } from 'v-money3'
 
-const amountShow = ref()
+const amountShow = ref('')
 const config = ref({
   decimal: '.',
   thousands: ',',
