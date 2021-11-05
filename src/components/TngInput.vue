@@ -3,9 +3,10 @@
     <div class="inputWrapper">
       <label>Enter your preferred amount</label>
       <input
-        v-model="amountShow"
+        v-model.lazy="amountShow"
         v-money="config"
-        type="numeric"
+        type="number"
+        inputmode="numeric"
         maxlength="20"
       />
     </div>

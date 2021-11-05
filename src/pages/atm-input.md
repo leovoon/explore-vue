@@ -21,7 +21,8 @@ title: ATM Like Input
       <input
         v-model="amountShow"
         v-money="config"
-        type="numeric"
+        type="number"
+        inputmode="numeric"
         maxlength="20"
       />
     </div>
