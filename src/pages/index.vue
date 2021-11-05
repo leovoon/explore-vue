@@ -61,7 +61,7 @@ const { t } = useI18n()
 
 <style>
 .vue-logo {
-  @apply fixed scale-120 top-0 right-0 -z-99 opacity-20 transform translate-x-1/4  translate-y-1/2 overflow-hidden;
+  @apply fixed scale-120 top-0 right-0 -z-99 opacity-20 transform translate-x-1/4  <sm:translate-y-1/2  overflow-hidden;
 
 }
 

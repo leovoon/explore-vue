@@ -15,6 +15,7 @@ specifiers:
   '@vueuse/motion': ^2.0.0-beta.4
   '@windicss/plugin-interaction-variants': ^1.0.0
   '@windicss/plugin-question-mark': ^0.1.1
+  autonumeric: ^4.6.0
   axios: ^0.24.0
   cross-env: ^7.0.3
   eslint: ^7.32.0
@@ -26,7 +27,7 @@ specifiers:
   pnpm: ^6.18.0
   prism-theme-vars: ^0.2.2
   typescript: ^4.4.4
-  v-money3: ^3.20.1
+  v-money3: 3.2.1
   validator: ^13.6.0
   vest: ^3.2.7
   vite: ^2.6.10
@@ -43,6 +44,7 @@ specifiers:
   vue-demi: ^0.11.4
   vue-global-api: ^0.2.4
   vue-i18n: ^9.1.9
+  vue-money: ^0.4.1
   vue-query: ^1.11.2
   vue-router: ^4.0.12
   vue-tsc: ^0.2.3
@@ -51,11 +53,12 @@ dependencies:
   '@vueuse/core': 5.3.0_vue@3.2.20
   '@vueuse/head': 0.6.0_vue@3.2.20
   '@vueuse/motion': 2.0.0-beta.4_vue@3.2.20
+  autonumeric: 4.6.0
   axios: 0.24.0
   nprogress: 0.2.0
   patch-vue-directive-ssr: 0.0.1
   prism-theme-vars: 0.2.2
-  v-money3: 3.20.1_vue@3.2.20
+  v-money3: 3.2.1
   validator: 13.6.0
   vest: 3.2.7
   vue: 3.2.20
@@ -63,6 +66,7 @@ dependencies:
   vue-demi: 0.11.4_vue@3.2.20
   vue-global-api: 0.2.4_vue@3.2.20
   vue-i18n: 9.1.9_vue@3.2.20
+  vue-money: 0.4.1
   vue-query: 1.11.2_vue@3.2.20
   vue-router: 4.0.12_vue@3.2.20
 
@@ -1883,7 +1887,7 @@ packages:
     dependencies:
       '@vueuse/shared': 6.7.3_vue@3.2.20
       vue: 3.2.20
-      vue-demi: 0.11.4_vue@3.2.20
+      vue-demi: 0.12.1_vue@3.2.20
     dev: false
 
   /@vueuse/head/0.6.0_vue@3.2.20:
@@ -1912,7 +1916,7 @@ packages:
   /@vueuse/shared/5.3.0_vue@3.2.20:
     resolution: {integrity: sha512-qZfkPFH0qTScFpYiPOFpTcxWriRhlM3bgSzl3DFTgr/U0eZg3w2EFWaRZHdWeSvAUdNQyjOC4Toa8S0zJyEjHw==}
     dependencies:
-      vue-demi: 0.11.4_vue@3.2.20
+      vue-demi: 0.12.1_vue@3.2.20
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -1930,7 +1934,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.20
-      vue-demi: 0.12.0_vue@3.2.20
+      vue-demi: 0.12.1_vue@3.2.20
     dev: false
 
   /@windicss/config/1.4.12:
@@ -2133,6 +2137,11 @@ packages:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
     dev: true
+
+  /autonumeric/4.6.0:
+    resolution: {integrity: sha512-bYnD2oD9UMZBTxSWcvXH1MTcp0w+CUBfXe4HI1QJLGzJu+O27Ny5gqzRcFuDsZB9jrZ5SJjqAG0PieJsaUdTcg==}
+    requiresBuild: true
+    dev: false
 
   /available-typed-arrays/1.0.5:
     resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==}
@@ -5708,12 +5717,8 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /v-money3/3.20.1_vue@3.2.20:
-    resolution: {integrity: sha512-jiKs+KnwVMrjQIec9TAjfFG60alILOsQZIt3fHJqPFeZVd+CaIt/6BxWsyG6nkN4bY8sBupyJ8r/Vg9xCcJG5w==}
-    peerDependencies:
-      vue: '>= 3.2.0'
-    dependencies:
-      vue: 3.2.20
+  /v-money3/3.2.1:
+    resolution: {integrity: sha512-3S1ZAOh8HlSKPwW1yVEOgAP5Qeet6qCxgDivkz8GuTCcmk52k4Pu6LTRqwQ2XECtF73gW42BTq7+Uyv1V7HjAA==}
     dev: false
 
   /v8-compile-cache/2.3.0:
@@ -6063,8 +6068,8 @@ packages:
       vue: 3.2.20
     dev: false
 
-  /vue-demi/0.12.0_vue@3.2.20:
-    resolution: {integrity: sha512-eggsbQSQEJKlvQrtrJLx4J44MIVq5+Z7QetIEh1Na+ZWLgt5Fq0qskQ1QmckTTEoFcUdn36c4K23EjtXZhws7w==}
+  /vue-demi/0.12.1_vue@3.2.20:
+    resolution: {integrity: sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
@@ -6099,7 +6104,7 @@ packages:
   /vue-global-api/0.2.4_vue@3.2.20:
     resolution: {integrity: sha512-Cm84AZiALt8f4CJZzPvbForTzAUYe41msnzUnRK6B7YkaDaN8g87ap8CpHWvTU0+XtyDeLLAeQoRr+uwamxfpQ==}
     dependencies:
-      vue-demi: 0.12.0_vue@3.2.20
+      vue-demi: 0.12.1_vue@3.2.20
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -6116,6 +6121,10 @@ packages:
       '@intlify/vue-devtools': 9.1.9
       '@vue/devtools-api': 6.0.0-beta.19
       vue: 3.2.20
+    dev: false
+
+  /vue-money/0.4.1:
+    resolution: {integrity: sha512-yVnfCqPIQ4++XIZvfT374E3YKHBMxj0aZulay6plqsuvc0D32FLBXqWO34p7a4X4maVfVOHhEelIGcRa+iI1oA==}
     dev: false
 
   /vue-query/1.11.2_vue@3.2.20:

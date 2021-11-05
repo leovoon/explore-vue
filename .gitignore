@@ -9,4 +9,5 @@ node_modules
 .idea/
 # logs
 *.log
-draft.md
+test.md
+csz/

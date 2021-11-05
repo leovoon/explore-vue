@@ -1,5 +1,5 @@
 <template>
-  <main class="px-4 py-10 text-center text-gray-700 dark:text-gray-200">
+  <main class="-sm:m-auto px-4 py-10 text-center text-gray-700 dark:text-gray-200">
     <button
       class=" fixed top-0 right-0 p-5 icon-btn mx-2 !outline-none"
       @click="toggleDark"
