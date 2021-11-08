@@ -5,9 +5,6 @@ declare module 'vue' {
   export interface GlobalComponents {
     AdviceSlip: typeof import('./src/components/AdviceSlip.vue')['default']
     'AkarIcons:arrowDownRight': typeof import('virtual:vite-icons/akar-icons/arrow-down-right')['default']
-    'AkarIcons:circleFill': typeof import('virtual:vite-icons/akar-icons/circle-fill')['default']
-    'AkarIcons:eyeOpen': typeof import('virtual:vite-icons/akar-icons/eye-open')['default']
-    'AkarIcons:eyeSlashed': typeof import('virtual:vite-icons/akar-icons/eye-slashed')['default']
     AppButton: typeof import('./src/components/AppButton.vue')['default']
     AppButton2: typeof import('./src/components/AppButton2.vue')['default']
     AppButton3: typeof import('./src/components/AppButton3.vue')['default']
@@ -18,7 +15,6 @@ declare module 'vue' {
     CarbonLogoGithub: typeof import('virtual:vite-icons/carbon/logo-github')['default']
     CarbonMoon: typeof import('virtual:vite-icons/carbon/moon')['default']
     CarbonSun: typeof import('virtual:vite-icons/carbon/sun')['default']
-    CarbonWarning: typeof import('virtual:vite-icons/carbon/warning')['default']
     CommentSortByKey: typeof import('./src/components/CommentSortByKey.vue')['default']
     DataSender: typeof import('./src/components/DataSender.vue')['default']
     Demo: typeof import('./src/components/Demo.vue')['default']
