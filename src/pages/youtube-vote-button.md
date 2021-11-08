@@ -26,8 +26,9 @@ title: Making of Youtube vote button component
 | Props   |      Type      |  Optional |
 |----------|:-------------:|------:|
 | val |  String | yes |
-| text |    String  |  no |
+| text |    String  |  yes |
 | selected |    Boolean  |   yes |
+| @select |    onClick event  |   yes |
 
 ```js
 // ProgressButton.vue
