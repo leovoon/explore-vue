@@ -33,7 +33,7 @@ const { t } = useI18n()
       </li>
     </ul>
 
-    <ul class="list-none text-left pl-2 space-y-1.2 ">
+    <ul class="list-none text-left pl-2 space-y-1.2 sm:text-center">
       <span class="pl-2">
         #frontend practice
       </span>

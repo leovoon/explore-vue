@@ -22,17 +22,21 @@
         <span
           v-if="results.total_results"
         >{{ results.total_results > 1 ? "Showing results: " : "Showing result: " }} {{ results.total_results }}</span>
-        <ol
-          v-if="results.slips"
-          v-for="slip in results.slips"
-          id="valid-result"
-          class="relative flex flex-col"
-          :key="slip.id"
-        >
-          <span>{{ slip.advice }}</span>
-          <span class="self-end bottom-0 w-max mx-auto text-gray-400">{{ slip.date }}</span>
+        <div v-if="results.slips">
+          <ol
+            v-for="slip in results.slips"
+
+            id="valid-result"
+            :key="slip.id"
+            class="relative flex flex-col"
+          >
+            <span>{{ slip.advice }}</span>
+            <span class="self-end bottom-0 w-max mx-auto text-gray-400">{{ slip.date }}</span>
+          </ol>
+        </div>
+        <ol v-if="results.message">
+          {{ results.message.text }}
         </ol>
-        <ol v-if="results.message">{{ results.message.text }}</ol>
       </ul>
 
       <ul v-if="isLoading">
@@ -42,7 +46,7 @@
             height="64"
             viewBox="0 0 140 64"
             xmlns="http://www.w3.org/2000/svg"
-            
+
             class="fill-green-500 dark:fill-light-100"
           >
             <path
@@ -78,7 +82,9 @@
         </div>
       </ul>
       <ul v-if="error">
-        <ol id="error">{{ error }}</ol>
+        <ol id="error">
+          {{ error }}
+        </ol>
       </ul>
     </div>
   </div>
@@ -88,17 +94,16 @@ import { useQuery } from 'vue-query'
 
 const searchTerm = ref<string>('')
 
-const fetcher = async (text: string) => {
-  const response = await fetch("https://api.adviceslip.com/advice/search/" + text).then(res => res.json())
+const fetcher = async(text: string) => {
+  const response = await fetch(`https://api.adviceslip.com/advice/search/${text}`).then(res => res.json())
   return response
 }
 
-const enabled = computed(() => !!searchTerm.value);
+const enabled = computed(() => !!searchTerm.value)
 
-const { isIdle, data: results, error, isLoading } = useQuery(
-  reactive(["slips", { searchTerm }]), () => fetcher(searchTerm.value), reactive({ enabled })
-);
-
+const { data: results, error, isLoading } = useQuery(
+  reactive(['slips', { searchTerm }]), () => fetcher(searchTerm.value), reactive({ enabled }),
+)
 
 </script>
   <style scoped>
