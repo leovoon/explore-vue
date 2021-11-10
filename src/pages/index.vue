@@ -32,7 +32,6 @@ const { t } = useI18n()
         </router-link>
       </li>
     </ul>
-
     <ul class="list-none text-left pl-2 space-y-1.2 sm:text-center">
       <span class="pl-2">
         #frontend practice
@@ -53,10 +52,13 @@ const { t } = useI18n()
         vue-query and vueuse-motion
       </list-link>
       <list-link path="/reusable-components">
-        making of reusable components using vue slot
+        reusable components using vue slot
       </list-link>
       <list-link path="/youtube-vote-button">
-        making of progressbar button component
+        the making of progressbar button component
+      </list-link>
+      <list-link path="/tabs-component">
+        the making of tabs component
       </list-link>
     </ul>
   </div>

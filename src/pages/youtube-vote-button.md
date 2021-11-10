@@ -1,14 +1,15 @@
 ---
-title: Making of Youtube vote button component
+title: Youtube vote button component
 ---
 
 <div class="text-center">
   <!-- You can use Vue components inside markdown -->
   <carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
-  <h3>Making of youtube-liked vote button component</h3>
+  <h3>youtube-liked vote button component</h3>
 </div>
 
-<demo></demo>
+<progress-button-demo>
+</progress-button-demo>
 
 <div class="space-y-2">
 <progress-button text="hello world" />
