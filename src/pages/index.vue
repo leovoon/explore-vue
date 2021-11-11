@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import lists from './lists.json'
 import ListLink from '~/components/ListLink.vue'
 // eslint-disable-next-line no-constant-condition
 
@@ -36,29 +37,8 @@ const { t } = useI18n()
       <span class="pl-2">
         #frontend practice
       </span>
-      <list-link path="/atm-input">
-        vmoney atm-liked input
-      </list-link>
-      <list-link path="/twitter-signup">
-        form validation using Vest part 1
-      </list-link>
-      <list-link path="/w3school-signup">
-        form validation using Vest part 2
-      </list-link>
-      <list-link path="/sort-by-key">
-        practical sorting by object key value
-      </list-link>
-      <list-link path="/search-by-key">
-        vue-query and vueuse-motion
-      </list-link>
-      <list-link path="/reusable-components">
-        reusable components using vue slot
-      </list-link>
-      <list-link path="/youtube-vote-button">
-        the making of progressbar button component
-      </list-link>
-      <list-link path="/tabs-component">
-        the making of tabs component
+      <list-link v-for="{name, path} in lists" :key="name" :path="`/${path}`">
+        {{ name }}
       </list-link>
     </ul>
   </div>
