@@ -34,5 +34,9 @@
     {
         "path": "lazy-loading",
         "name": "lazy load component with Suspense"
+    },
+    {
+        "path": "accordion-component",
+        "name": "the making of accordion component"
     }
 ]

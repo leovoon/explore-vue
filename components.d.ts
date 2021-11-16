@@ -3,6 +3,8 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Accordion: typeof import('./src/components/Accordion.vue')['default']
+    AccordionDemo: typeof import('./src/components/AccordionDemo.vue')['default']
     AdviceSlip: typeof import('./src/components/AdviceSlip.vue')['default']
     'AkarIcons:arrowDownRight': typeof import('virtual:vite-icons/akar-icons/arrow-down-right')['default']
     'AkarIcons:circleFill': typeof import('virtual:vite-icons/akar-icons/circle-fill')['default']
@@ -15,10 +17,13 @@ declare module 'vue' {
     AppSelect: typeof import('./src/components/AppSelect.vue')['default']
     AsyncReloadPrompt: typeof import('./src/components/AsyncReloadPrompt.vue')['default']
     BigImage: typeof import('./src/components/BigImage.vue')['default']
+    CarbonChevronDown: typeof import('virtual:vite-icons/carbon/chevron-down')['default']
+    CarbonChevronUp: typeof import('virtual:vite-icons/carbon/chevron-up')['default']
     CarbonDicomOverlay: typeof import('virtual:vite-icons/carbon/dicom-overlay')['default']
     CarbonLanguage: typeof import('virtual:vite-icons/carbon/language')['default']
     CarbonLogoGithub: typeof import('virtual:vite-icons/carbon/logo-github')['default']
     CarbonMoon: typeof import('virtual:vite-icons/carbon/moon')['default']
+    CarbonPedestrian: typeof import('virtual:vite-icons/carbon/pedestrian')['default']
     CarbonSun: typeof import('virtual:vite-icons/carbon/sun')['default']
     CarbonWarning: typeof import('virtual:vite-icons/carbon/warning')['default']
     CommentSortByKey: typeof import('./src/components/CommentSortByKey.vue')['default']
