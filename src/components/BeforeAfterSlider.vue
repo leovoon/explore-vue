@@ -1,11 +1,16 @@
 <template>
   <div
-    class="relative group"
-    :class="[ `h-[${containerHeight}]`, `w-[${containerWidth}]`]"
+    class="relative min-w-[250px] min-h-[250px] group"
   >
-    <div class="img background-img"></div>
+    <div
+      class="img"
+      :style="{ backgroundImage: `url(${imgSrcAfter})` }"
+    ></div>
     <!-- fake effect -->
-    <div class="img foreground-img  filter grayscale-80"></div>
+    <div
+      class="img foreground-img filter grayscale-80"
+      :style="{ backgroundImage: `url(${imgSrcBefore})` }"
+    ></div>
     <input
       v-model="rangeValue"
       type="range"
@@ -27,25 +32,15 @@
   </div>
 </template>
 
-<script setup lang='ts'>
-const rangeValue = ref('50')
-
-const props = defineProps({
-  containerWidth: {
-    type: String,
-    default: '250px',
-  },
-  containerHeight: {
-    type: String,
-    default: '250px',
-  },
+<script lang='ts' setup>
+defineProps({
   imgSrcBefore: {
     type: String,
-    default: 'https://cdn.lorem.space/images/movie/.cache/250x250/interstellar-2014.jpeg',
+    default: 'https://api.lorem.space/image/movie?w=250&h=250',
   },
   imgSrcAfter: {
     type: String,
-    default: 'https://cdn.lorem.space/images/movie/.cache/250x250/interstellar-2014.jpeg',
+    default: 'https://api.lorem.space/image/movie?w=250&h=250',
   },
   thumbHeight: {
     type: String,
@@ -59,7 +54,7 @@ const props = defineProps({
   },
   thumbColor: {
     type: String,
-    default: 'white',
+    default: '#fffff',
     validator: (value: string) => /^#[0-9a-f]{6}$/.test(value),
   },
   labelled: {
@@ -74,8 +69,7 @@ const props = defineProps({
   },
 })
 
-const imgSrcAfterUrl = computed(() => `url(${props.imgSrcAfter})`)
-const imgSrcBeforeUrl = computed(() => `url(${props.imgSrcAfter})`)
+const rangeValue = ref('50')
 const foregroundWidth = computed(() => {
   const range = rangeValue.value
   return `${range}%`
@@ -86,15 +80,10 @@ const foregroundWidth = computed(() => {
 
 <style scoped>
 .img {
-@apply absolute w-full h-full background-cover;
-}
-
-.background-img {
-    background-image: v-bind(imgSrcBeforeUrl);
+@apply absolute inset-0 w-full h-full background-cover;
 }
 
 .foreground-img {
-    background-image: v-bind(imgSrcAfterUrl);
     width: v-bind(foregroundWidth);
 }
 

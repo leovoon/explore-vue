@@ -37,11 +37,9 @@ random image from [loremspace](https://lorem.space)
 |----------|:-------------:|:------:|
 | img-src-before |  url: String | yes |
 | img-src-before |   url: String |  yes |
-| container-width |    px: String  |   yes |
-| container-height |    px: String  |   yes |
 | thumb-height |    px: String  |   yes |
 | thumb-width |    px: String  |   yes |
-| thumb-color |    Hex \| CSS  |   yes |
+| thumb-color |    Hex  |   yes |
 |  center-thumb  |    Boolean  |   yes |
 |  labelled  |    Boolean  |   yes |
 

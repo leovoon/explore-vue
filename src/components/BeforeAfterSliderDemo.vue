@@ -3,7 +3,7 @@
     <before-after-slider
       thumb-height="250px"
       thumb-width="5px"
-      thumb-color="white"
+      thumb-color="#ffffff"
       center-thumb
       labelled
     />
