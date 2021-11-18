@@ -26,7 +26,7 @@ random image from [loremspace](https://lorem.space)
       img-src-after="url"
       thumb-height="250px"
       thumb-width="5px"
-      thumb-color="white"
+      thumb-color="#ffffff"
       center-thumb
       labelled
     />
@@ -52,12 +52,17 @@ random image from [loremspace](https://lorem.space)
 // BeforeAfterSlider.vue
 <template>
   <div
-    class="relative group"
-    :class="[ `h-[${containerHeight}]`, `w-[${containerWidth}]`]"
+    class="relative min-w-[250px] min-h-[250px] group"
   >
-    <div class="img background-img"></div>
+    <div
+      class="img"
+      :style="{ backgroundImage: `url(${imgSrcAfter})` }"
+    ></div>
     <!-- fake effect -->
-    <div class="img foreground-img  filter grayscale-80"></div>
+    <div
+      class="img foreground-img filter grayscale-80"
+      :style="{ backgroundImage: `url(${imgSrcBefore})` }"
+    ></div>
     <input
       v-model="rangeValue"
       type="range"
@@ -81,17 +86,7 @@ random image from [loremspace](https://lorem.space)
 ```
 ```js
 <script setup lang='ts'>
-const rangeValue = ref('50')
-
-const props = defineProps({
-  containerWidth: {
-    type: String,
-    default: '250px',
-  },
-  containerHeight: {
-    type: String,
-    default: '250px',
-  },
+defineProps({
   imgSrcBefore: {
     type: String,
     default: 'https://api.lorem.space/image/movie?w=250&h=250',
@@ -112,7 +107,7 @@ const props = defineProps({
   },
   thumbColor: {
     type: String,
-    default: 'white',
+    default: '#fffff',
     validator: (value: string) => /^#[0-9a-f]{6}$/.test(value),
   },
   labelled: {
@@ -127,8 +122,7 @@ const props = defineProps({
   },
 })
 
-const imgSrcAfterUrl = computed(() => `url(${props.imgSrcAfter})`)
-const imgSrcBeforeUrl = computed(() => `url(${props.imgSrcAfter})`)
+const rangeValue = ref('50')
 const foregroundWidth = computed(() => {
   const range = rangeValue.value
   return `${range}%`
@@ -138,20 +132,15 @@ const foregroundWidth = computed(() => {
 </script>
 ```
 
-#### Styling
+### Styling
 here comes `v-bind` so magic
 ```js
 <style scoped>
 .img {
-@apply absolute w-full h-full background-cover;
-}
-
-.background-img {
-    background-image: v-bind(imgSrcBeforeUrl);
+@apply absolute inset-0 w-full h-full background-cover;
 }
 
 .foreground-img {
-    background-image: v-bind(imgSrcAfterUrl);
     width: v-bind(foregroundWidth);
 }
 
@@ -177,5 +166,4 @@ span {
 .center-thumb {
     left: v-bind(foregroundWidth);
 }
-</style>
 ```
