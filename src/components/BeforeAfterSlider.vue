@@ -41,11 +41,11 @@ const props = defineProps({
   },
   imgSrcBefore: {
     type: String,
-    default: 'https://api.lorem.space/image/movie?w=250&h=250',
+    default: 'https://cdn.lorem.space/images/movie/.cache/250x250/interstellar-2014.jpeg',
   },
   imgSrcAfter: {
     type: String,
-    default: 'https://api.lorem.space/image/movie?w=250&h=250',
+    default: 'https://cdn.lorem.space/images/movie/.cache/250x250/interstellar-2014.jpeg',
   },
   thumbHeight: {
     type: String,
