@@ -38,5 +38,10 @@
     {
         "path": "accordion-component",
         "name": "the making of accordion component"
+    },
+    {
+        "path": "before-after-slider-component",
+        "name": "the making of before-after-slider component"
     }
+
 ]

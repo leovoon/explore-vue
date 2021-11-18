@@ -1,0 +1,183 @@
+---
+title: before after slider Vue 3 component
+---
+
+<div class="text-center">
+  <!-- You can use Vue components inside markdown -->
+  <carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
+  <h3>The making of before-after slider Vue3 component</h3>
+  <p>experimenting Vue3 new feature - CSS reactive binding <br>
+  ... so much fun!</p>
+  
+
+</div>
+
+
+<before-after-slider-demo/>
+
+random image from [loremspace](https://lorem.space)
+
+
+### How to Use
+```html
+<template>
+ <before-after-slider
+      img-src-before="url"
+      img-src-after="url"
+      thumb-height="250px"
+      thumb-width="5px"
+      thumb-color="white"
+      center-thumb
+      labelled
+    />
+</template>
+```
+
+| Props   |      Type      |  Optional | 
+|----------|:-------------:|:------:|
+| img-src-before |  url: String | yes |
+| img-src-before |   url: String |  yes |
+| container-width |    px: String  |   yes |
+| container-height |    px: String  |   yes |
+| thumb-height |    px: String  |   yes |
+| thumb-width |    px: String  |   yes |
+| thumb-color |    Hex \| CSS  |   yes |
+|  center-thumb  |    Boolean  |   yes |
+|  labelled  |    Boolean  |   yes |
+
+
+
+
+### Code
+
+```js
+// BeforeAfterSlider.vue
+<template>
+  <div
+    class="relative group"
+    :class="[ `h-[${containerHeight}]`, `w-[${containerWidth}]`]"
+  >
+    <div class="img background-img"></div>
+    <!-- fake effect -->
+    <div class="img foreground-img  filter grayscale-80"></div>
+    <input
+      v-model="rangeValue"
+      type="range"
+      min="0"
+      max="100"
+      class="slider appearance-none bg-transparent opacity-0 hover:opacity-75
+       overflow-visible absolute inset-0 h-full w-full transition ease"
+    >
+    <span v-show="labelled" class="absolute inset-0">Before</span>
+    <span v-show="labelled" class="absolute right-0">After</span>
+
+    <emojione:left-right-arrow
+      v-show="centerThumb"
+      class="center-thumb inline-block absolute transform origin-center
+      -translate-x-1/2 -translate-y-1/2 inset-1/2
+       w-8 h-8 opacity-0 group-hover:opacity-100
+       pointer-events-none transition ease"
+    />
+  </div>
+</template>
+```
+```js
+<script setup lang='ts'>
+const rangeValue = ref('50')
+
+const props = defineProps({
+  containerWidth: {
+    type: String,
+    default: '250px',
+  },
+  containerHeight: {
+    type: String,
+    default: '250px',
+  },
+  imgSrcBefore: {
+    type: String,
+    default: 'https://api.lorem.space/image/movie?w=250&h=250',
+  },
+  imgSrcAfter: {
+    type: String,
+    default: 'https://api.lorem.space/image/movie?w=250&h=250',
+  },
+  thumbHeight: {
+    type: String,
+    default: '150px',
+    validator: (value: string) => /^\d+px$/.test(value),
+  },
+  thumbWidth: {
+    type: String,
+    default: '1px',
+    validator: (value: string) => /^\d+px$/.test(value),
+  },
+  thumbColor: {
+    type: String,
+    default: 'white',
+    validator: (value: string) => /^#[0-9a-f]{6}$/.test(value),
+  },
+  labelled: {
+    type: Boolean,
+    default: false,
+    required: false,
+  },
+  centerThumb: {
+    type: Boolean,
+    default: false,
+    required: false,
+  },
+})
+
+const imgSrcAfterUrl = computed(() => `url(${props.imgSrcAfter})`)
+const imgSrcBeforeUrl = computed(() => `url(${props.imgSrcAfter})`)
+const foregroundWidth = computed(() => {
+  const range = rangeValue.value
+  return `${range}%`
+})
+
+// more props, endless possibilities
+</script>
+```
+
+#### Styling
+here comes `v-bind` so magic
+```js
+<style scoped>
+.img {
+@apply absolute w-full h-full background-cover;
+}
+
+.background-img {
+    background-image: v-bind(imgSrcBeforeUrl);
+}
+
+.foreground-img {
+    background-image: v-bind(imgSrcAfterUrl);
+    width: v-bind(foregroundWidth);
+}
+
+.slider::-moz-range-thumb  {
+    @apply appearance-none cursor-pointer;
+    height: v-bind(thumbHeight);
+    width: v-bind(thumbWidth);
+
+}
+
+.slider::-webkit-slider-thumb {
+    @apply appearance-none cursor-pointer ;
+    height: v-bind(thumbHeight);
+    width: v-bind(thumbWidth);
+    background-color: v-bind(thumbColor);
+}
+
+span {
+    @apply p-1 text-black text-white w-min
+    h-min text-xs bg-opacity-40 bg-light-600;
+}
+
+.center-thumb {
+    left: v-bind(foregroundWidth);
+}
+</style>
+```
