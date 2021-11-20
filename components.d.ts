@@ -36,6 +36,8 @@ declare module 'vue' {
     ListLink: typeof import('./src/components/ListLink.vue')['default']
     ProgressButton: typeof import('./src/components/ProgressButton.vue')['default']
     ProgressButtonDemo: typeof import('./src/components/ProgressButtonDemo.vue')['default']
+    QrGenerator: typeof import('./src/components/QrGenerator.vue')['default']
+    QrGeneratorDemo: typeof import('./src/components/QrGeneratorDemo.vue')['default']
     Tab1: typeof import('./src/components/Tab1.vue')['default']
     Tab2: typeof import('./src/components/Tab2.vue')['default']
     TabDemo: typeof import('./src/components/TabDemo.vue')['default']

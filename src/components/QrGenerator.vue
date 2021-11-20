@@ -1,38 +1,4 @@
----
-title: Vue 3 simple accordion component 
----
-
-<div class="text-center">
-  <carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
-  <h3>Qr code generator component</h3>
-  <p>vueuse - useQRCode, useShare</p>
-</div>  
-
-<qr-generator-demo/>
-
-## How to Use
-```js
-  <qr-generator 
-  :input-text="yourTextToGenerate" 
-  :title="yourTitle"
-  img-width="200"
-  img-height="200"
-  click-to-download />
-```
-
-| Props   |      Type      |  Optional |
-|----------|:-------------:|------:|
-| input-text |  String | no |
-| title |  String | yes |
-| img-width |  String | yes |
-| img-height |  String | yes |
-| click-to-download |  Boolean | yes |
-
-
-## Code
-
-```js
-// QrGenerator.vue
+<template>
   <a
     v-if="clickToDownload"
     :href="qrCode"
@@ -53,10 +19,10 @@ title: Vue 3 simple accordion component
     :width="imgWidth"
     :height="imgHeight"
   />
-```
+</template>
 
-```js
 <script setup lang='ts'>
+import { Ref } from '@vue/reactivity'
 import { useQRCode } from '@vueuse/integrations/useQRCode'
 
 const props = defineProps({
@@ -88,6 +54,3 @@ const props = defineProps({
 
 const qrCode = useQRCode(props.inputText)
 </script>
-```
-
-that's it.
