@@ -22,7 +22,6 @@
 </template>
 
 <script setup lang='ts'>
-import { Ref } from '@vue/reactivity'
 import { useQRCode } from '@vueuse/integrations/useQRCode'
 
 const props = defineProps({
