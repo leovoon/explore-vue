@@ -42,6 +42,10 @@
     {
         "path": "before-after-slider-component",
         "name": "the making of before-after-slider component"
+    },
+    {
+        "path": "qr-generator-component",
+        "name:": "the making of qrcode generator component"
     }
 
 ]
