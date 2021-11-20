@@ -1,5 +1,5 @@
 ---
-title: Vue 3 simple accordion component 
+title: Qr code generator Vue 3 component
 ---
 
 <div class="text-center">
