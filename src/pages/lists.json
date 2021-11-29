@@ -46,6 +46,10 @@
     {
         "path": "qr-generator-component",
         "name": "the making of QRcode generator component"
+    },
+    {
+        "path": "scroll-animate-intersection-observer",
+        "name": "sticky scrolling animation - useIntersectionObserver"
     }
 
 ]

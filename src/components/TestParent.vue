@@ -10,7 +10,6 @@
 
 <script setup lang='ts'>
 const state = ref('state')
-const emit = defineEmits(['send-start', 'send-completed'])
 </script>
 
 <style scoped>
