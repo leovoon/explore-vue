@@ -2,6 +2,7 @@
 import { useHead } from '@vueuse/head'
 import { useQueryProvider } from 'vue-query'
 import { defineAsyncComponent } from 'vue'
+
 // eslint-disable-next-line no-constant-condition
 const AsyncReloadPrompt = typeof 'window' !== 'undefined'
   ? defineAsyncComponent(() => import('~/components/AsyncReloadPrompt.vue'))

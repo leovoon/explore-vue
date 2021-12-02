@@ -50,6 +50,11 @@
     {
         "path": "scroll-animate-intersection-observer",
         "name": "sticky scrolling animation - useIntersectionObserver"
+    },
+    {
+        "path": "search-by-object-properties-composable",
+        "name": "search by object properties - composable hook"
     }
+
 
 ]
