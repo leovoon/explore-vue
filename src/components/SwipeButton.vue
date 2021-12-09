@@ -1,5 +1,5 @@
 <template>
-  <button class="bg-green-600 rounded-full w-full relative">
+  <div class="bg-green-600 rounded-full w-full relative">
     <span :style="{opacity, fontSize}" class="absolute text-light-50 font-bold inset-0 text-center grid place-content-center">
       <slot>
         {{ title }}
@@ -12,11 +12,11 @@
         </slot>
       </div>
     </div>
-  </button>
+  </div>
 </template>
 
 <script setup lang='ts'>
-import { usePointerSwipe } from '@vueuse/core'
+import { useSwipe } from '@vueuse/core'
 import { ComputedRef } from 'vue-demi'
 
 const props = defineProps({
@@ -46,7 +46,7 @@ const elWidth: ComputedRef<number | undefined> = computed(() => el.value?.offset
 const width = computed(() => props.thumbWidth)
 const height = computed(() => props.thumbHeight)
 
-const { distanceX } = usePointerSwipe(el, {
+const { lengthX: distanceX } = useSwipe(el, {
   onSwipe() {
     if (containerWidth.value) {
       if (distanceX.value < 0 && elWidth.value) {
@@ -64,7 +64,7 @@ const { distanceX } = usePointerSwipe(el, {
       }
     }
   },
-  onSwipeEnd(e: PointerEvent) {
+  onSwipeEnd() {
     if (distanceX.value < 0 && containerWidth.value && (Math.abs(distanceX.value) / containerWidth.value) >= 0.8) {
       if (elWidth.value) left.value = `${containerWidth.value - elWidth.value}px`
       opacity.value = 0

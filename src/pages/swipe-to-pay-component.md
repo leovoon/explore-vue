@@ -6,7 +6,7 @@ description: Vue 3 component GrabPay-like swipe to pay component
 <div class="text-center">
   <!-- You can use Vue components inside markdown -->
   <carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
-  <h3>Swipe button component using usePositionSwipe</h3>
+  <h3>Swipe-to-pay component using useSwipe</h3>
   <p>implementing GrabPay swipe to pay button</p>
 </div>
 
@@ -54,7 +54,7 @@ const handleSwipeEnd = (payload: boolean) => {
 </script>
 ```
 
-output of the above code
+output of the above code 👇
 
 <swipe-button-demo/>
 
@@ -98,11 +98,11 @@ output of the above code
 
 #### logic 
 
-thanks to [usePointerSwipe](https://vueuse.org/core/usepointerswipe/)
+thanks to [useSwipe](https://vueuse.org/core/useswipe/)
 
 ```js
 <script setup lang='ts'>
-import { usePointerSwipe } from '@vueuse/core'
+import { useSwipe } from '@vueuse/core'
 import { ComputedRef } from 'vue-demi'
 
 const props = defineProps({...})
@@ -120,7 +120,7 @@ const width = computed(() => props.thumbWidth)
 const height = computed(() => props.thumbHeight)
 
 
-const { distanceX } = usePointerSwipe(el, {
+const { lengthX: distanceX } = usePointerSwipe(el, {
   onSwipe() {
     if (containerWidth.value) {
       if (distanceX.value < 0 && elWidth.value) {
@@ -139,7 +139,7 @@ const { distanceX } = usePointerSwipe(el, {
       }
     }
   },
-  onSwipeEnd(e: PointerEvent) {
+  onSwipeEnd() {
     if (distanceX.value < 0 && containerWidth.value && (Math.abs(distanceX.value) / containerWidth.value) >= 0.8) {
       if (elWidth.value) left.value = `${containerWidth.value - elWidth.value}px`
       opacity.value = 0
