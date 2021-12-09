@@ -8,9 +8,10 @@
         type="text"
         inputmode="numeric"
         maxlength="20"
+        @input="sendAmount(amountShow)"
       />
     </div>
-    <span>Min reload amount is RM 10</span>
+    <span v-if="!inputOnly">Min reload amount is RM 10</span>
   </div>
 </template>
 
@@ -26,6 +27,19 @@ const config = ref({
   masked: false,
   disableNegative: true,
 })
+
+defineProps({
+  inputOnly: {
+    type: Boolean,
+    default: false,
+  },
+})
+
+const emit = defineEmits(['getAmount'])
+const sendAmount = (amt: string) => {
+  emit('getAmount', amt)
+}
+
 </script>
 
 <style scoped>

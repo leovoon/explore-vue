@@ -54,6 +54,10 @@
     {
         "path": "search-by-object-properties-composable",
         "name": "search by object properties - composable hook"
+    },
+    {
+        "path": "swipe-button-component",
+        "name": "the making of swipe-to-pay component"
     }
 
 
