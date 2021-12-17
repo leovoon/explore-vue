@@ -47,4 +47,10 @@ html.dark {
   font-size: 0.9em;
 }
 
+.prose code::after, .prose code::before {
+  content: none;
+}
 
+code {
+  @apply dark:(bg-green-600 bg-opacity-80 px-1 rounded-lg);
+}

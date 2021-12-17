@@ -10,4 +10,6 @@ node_modules
 # logs
 *.log
 test.md
+testpoie.vue
+plain.vue
 csz/

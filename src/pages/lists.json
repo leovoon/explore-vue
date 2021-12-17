@@ -58,6 +58,10 @@
     {
         "path": "swipe-to-pay-component",
         "name": "the making of swipe-to-pay component"
+    },
+    {
+        "path": "v-if-vs-v-show",
+        "name": "the difference between v-if and v-show"
     }
 
 
