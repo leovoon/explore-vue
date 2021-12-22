@@ -3,7 +3,6 @@ import colors from 'windicss/colors'
 import typography from 'windicss/plugin/typography'
 import '@windicss/plugin-question-mark'
 import '@windicss/plugin-interaction-variants'
-import scrollSnapPlugin from 'windicss/plugin/scroll-snap'
 
 export default defineConfig({
   darkMode: 'class',
@@ -12,14 +11,13 @@ export default defineConfig({
     typography(),
     require('@windicss/plugin-question-mark'),
     require('@windicss/plugin-interaction-variants'),
-    scrollSnapPlugin,
   ],
   theme: {
     extend: {
       typography: {
         DEFAULT: {
           css: {
-            maxWidth: '65ch',
+            maxWidth: '86ch',
             color: 'inherit',
             a: {
               'color': 'inherit',

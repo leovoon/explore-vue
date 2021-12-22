@@ -13,6 +13,8 @@ description: Vue 3 component GrabPay-like swipe to pay component
 ## Demo
 <swipe-button/>
 
+This only works on mobile. For desktop implementation, use [usePointerSwipe](https://vueuse.org/core/usepointerswipe/)
+
 ## How to use
 Here is an example of how to use the component
 

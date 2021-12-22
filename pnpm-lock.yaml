@@ -10,13 +10,12 @@ specifiers:
   '@vitejs/plugin-vue': ^1.9.3
   '@vue/compiler-sfc': ^3.2.20
   '@vue/server-renderer': ^3.2.20
-  '@vueuse/core': 6.7.6
+  '@vueuse/core': ^7.4.0
   '@vueuse/head': ^0.6.0
   '@vueuse/integrations': ^6.9.2
   '@vueuse/motion': ^2.0.0-beta.4
   '@windicss/plugin-interaction-variants': ^1.0.0
   '@windicss/plugin-question-mark': ^0.1.1
-  autonumeric: ^4.6.0
   axios: ^0.24.0
   cross-env: ^7.0.3
   eslint: ^7.32.0
@@ -45,30 +44,25 @@ specifiers:
   vue-demi: ^0.11.4
   vue-global-api: ^0.2.4
   vue-i18n: ^9.1.9
-  vue-money: ^0.4.1
   vue-query: ^1.11.2
   vue-router: ^4.0.12
   vue-tsc: ^0.2.3
 
 dependencies:
-  '@vueuse/core': 6.7.6_vue@3.2.20
+  '@vueuse/core': 7.4.0_vue@3.2.20
   '@vueuse/head': 0.6.0_vue@3.2.20
   '@vueuse/integrations': 6.9.2_vue@3.2.20
   '@vueuse/motion': 2.0.0-beta.4_vue@3.2.20
-  autonumeric: 4.6.0
   axios: 0.24.0
   nprogress: 0.2.0
-  patch-vue-directive-ssr: 0.0.1
   prism-theme-vars: 0.2.2
   v-money3: 3.2.1
   validator: 13.6.0
-  vest: 3.2.7
   vue: 3.2.20
   vue-content-loader: 2.0.0_vue@3.2.20
   vue-demi: 0.11.4_vue@3.2.20
   vue-global-api: 0.2.4_vue@3.2.20
   vue-i18n: 9.1.9_vue@3.2.20
-  vue-money: 0.4.1
   vue-query: 1.11.2_vue@3.2.20
   vue-router: 4.0.12_vue@3.2.20
 
@@ -89,8 +83,10 @@ devDependencies:
   https-localhost: 4.7.0
   markdown-it-link-attributes: 3.0.0
   markdown-it-prism: 2.2.1
+  patch-vue-directive-ssr: 0.0.1
   pnpm: 6.20.3
   typescript: 4.4.4
+  vest: 3.2.8
   vite: 2.6.10
   vite-plugin-components: 0.13.3_vite@2.6.10
   vite-plugin-icons: 0.6.5_d2493dc358a4bfe74069e63c1b14dd61
@@ -1878,22 +1874,6 @@ packages:
   /@vue/shared/3.2.20:
     resolution: {integrity: sha512-FbpX+hD5BvXCQerEYO7jtAGHlhAkhTQ4KIV73kmLWNlawWhTiVuQxizgVb0BOkX5oG9cIRZ42EG++d/k/Efp0w==}
 
-  /@vueuse/core/6.7.6_vue@3.2.20:
-    resolution: {integrity: sha512-oVyqARXnTvhf4m6xf/sHw+SNJWcRYJn8+L4TZTFBU9POf9GIzBN7iHD2Oc4K4rTWXGQzXfoFHgbrXyeMFCRoqA==}
-    peerDependencies:
-      '@vue/composition-api': ^1.1.0
-      vue: ^2.6.0 || ^3.2.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-      vue:
-        optional: true
-    dependencies:
-      '@vueuse/shared': 6.7.6_vue@3.2.20
-      vue: 3.2.20
-      vue-demi: 0.11.4_vue@3.2.20
-    dev: false
-
   /@vueuse/core/6.9.2_vue@3.2.20:
     resolution: {integrity: sha512-FRwl4ccSFuHZBHLGgS9TMv/+Dd6XFaL4o9nph2qtgQIV+z29RBFokw08XjHfykiENRzB01MjYHJ7iRUnsIFQXg==}
     peerDependencies:
@@ -1906,6 +1886,22 @@ packages:
         optional: true
     dependencies:
       '@vueuse/shared': 6.9.2_vue@3.2.20
+      vue: 3.2.20
+      vue-demi: 0.12.1_vue@3.2.20
+    dev: false
+
+  /@vueuse/core/7.4.0_vue@3.2.20:
+    resolution: {integrity: sha512-CgYouxjXOE63gMn3l9cOsgzPTEAk3yoncsSmJUxXAi/to25rCPVWB/39jXTPhWZboR43EDDMWoEhHaSoMzaldg==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.0
+      vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      '@vueuse/shared': 7.4.0_vue@3.2.20
       vue: 3.2.20
       vue-demi: 0.12.1_vue@3.2.20
     dev: false
@@ -1948,14 +1944,14 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      '@vueuse/core': 6.7.6_vue@3.2.20
+      '@vueuse/core': 6.9.2_vue@3.2.20
       popmotion: 10.0.1
       vue: 3.2.20
       vue-demi: 0.11.4_vue@3.2.20
     dev: false
 
-  /@vueuse/shared/6.7.6_vue@3.2.20:
-    resolution: {integrity: sha512-MfzTKkFK63PcjDdTpJRuJqylpyUdXpic9ueTRcgpPizqFpoYIuI6DkdYjub2Ch5+OYYhVnCqe8ynW6WzYo7DGQ==}
+  /@vueuse/shared/6.9.2_vue@3.2.20:
+    resolution: {integrity: sha512-lAiMh6XROs0kSKVd0Yb/6GKoQMxC1fYrFDi6opvQWISPtcqRNluRrQxLUZ3WTI78ovtoKRLktjhkFAtydcfFDg==}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
@@ -1969,8 +1965,8 @@ packages:
       vue-demi: 0.12.1_vue@3.2.20
     dev: false
 
-  /@vueuse/shared/6.9.2_vue@3.2.20:
-    resolution: {integrity: sha512-lAiMh6XROs0kSKVd0Yb/6GKoQMxC1fYrFDi6opvQWISPtcqRNluRrQxLUZ3WTI78ovtoKRLktjhkFAtydcfFDg==}
+  /@vueuse/shared/7.4.0_vue@3.2.20:
+    resolution: {integrity: sha512-x5Jn6jUB8gS1mGnVCoNWFEpAoDkm2QwtacZTUgKMn0Ow8tlUBKIfGVOt4vn9qZB10froED/ARHEj79WKLXRieA==}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
@@ -2189,11 +2185,6 @@ packages:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
     dev: true
-
-  /autonumeric/4.6.0:
-    resolution: {integrity: sha512-bYnD2oD9UMZBTxSWcvXH1MTcp0w+CUBfXe4HI1QJLGzJu+O27Ny5gqzRcFuDsZB9jrZ5SJjqAG0PieJsaUdTcg==}
-    requiresBuild: true
-    dev: false
 
   /available-typed-arrays/1.0.5:
     resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==}
@@ -4829,7 +4820,7 @@ packages:
   /patch-vue-directive-ssr/0.0.1:
     resolution: {integrity: sha512-n84llktHah+EXUGo+RvmTJcAQJQVW0kHHHiJ34ZSLijzhHi32zCMjCc5VAFv4jmdC91bpaYGPk0cDW1D8hQ3GQ==}
     requiresBuild: true
-    dev: false
+    dev: true
 
   /path-exists/3.0.0:
     resolution: {integrity: sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=}
@@ -5990,9 +5981,9 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vest/3.2.7:
-    resolution: {integrity: sha512-s0W8BZDRwOu7xTD8cE4JZV8tY1xGigerwzsDu1ggqNYlK9Ehvs+fElDOapVgP0DOenNcO+lM31dMUpinNDVGiA==}
-    dev: false
+  /vest/3.2.8:
+    resolution: {integrity: sha512-O+GLawwfIO7ESODaJMevsI+LL959dZzjwK6oUYzMTxog+6fZ8U/NPR/ITX6tmECb8EEUVuLkNJ1lGOkoor35SA==}
+    dev: true
 
   /vite-plugin-components/0.13.3_vite@2.6.10:
     resolution: {integrity: sha512-6vLWPrEqFSW7REYvux/WVwxsytg/DcstVhdgAT806cZi/KGiQgB8dyFnLkrkFawxUQruuGkLWfS99Z/64mMC0w==}
@@ -6369,10 +6360,6 @@ packages:
       '@intlify/vue-devtools': 9.1.9
       '@vue/devtools-api': 6.0.0-beta.19
       vue: 3.2.20
-    dev: false
-
-  /vue-money/0.4.1:
-    resolution: {integrity: sha512-yVnfCqPIQ4++XIZvfT374E3YKHBMxj0aZulay6plqsuvc0D32FLBXqWO34p7a4X4maVfVOHhEelIGcRa+iI1oA==}
     dev: false
 
   /vue-query/1.11.2_vue@3.2.20:
