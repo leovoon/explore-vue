@@ -62,7 +62,12 @@
     {
         "path": "v-if-vs-v-show",
         "name": "the difference between v-if and v-show"
+    },
+    {
+        "path": "typescript-vue",
+        "name": "how to use TypeScript in Vue"
     }
+    
 
 
 ]
