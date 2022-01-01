@@ -23,6 +23,8 @@ const { t } = useI18n()
     <p>vueInFreeTime</p>
     <p>
       <em class="text-sm opacity-75">{{ t("intro.desc") }}</em>
+      <br>
+      <em class="text-sm opacity-75">#vue3 #composition-api</em>
     </p>
 
     <ul class="flex flex-col list-none my-4 space-y-2">

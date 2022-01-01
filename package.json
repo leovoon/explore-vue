@@ -16,6 +16,7 @@
     "axios": "^0.24.0",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
+    "swiper": "^7.4.1",
     "v-money3": "3.2.1",
     "validator": "^13.6.0",
     "vue": "^3.2.20",

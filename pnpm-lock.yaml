@@ -26,6 +26,7 @@ specifiers:
   patch-vue-directive-ssr: ^0.0.1
   pnpm: ^6.20.3
   prism-theme-vars: ^0.2.2
+  swiper: ^7.4.1
   typescript: ^4.4.4
   v-money3: 3.2.1
   validator: ^13.6.0
@@ -56,6 +57,7 @@ dependencies:
   axios: 0.24.0
   nprogress: 0.2.0
   prism-theme-vars: 0.2.2
+  swiper: 7.4.1
   v-money3: 3.2.1
   validator: 13.6.0
   vue: 3.2.20
@@ -2743,6 +2745,12 @@ packages:
       domhandler: 4.2.2
       entities: 2.2.0
     dev: true
+
+  /dom7/4.0.2:
+    resolution: {integrity: sha512-Ji4t3Y/vNQg6Q9bR+Syx6Td8qiq8116LE9h4OzbPuxdxK7DyyX7i8EXkYgBX6+EiX6+oYXDTH5BSN29G/n4jug==}
+    dependencies:
+      ssr-window: 4.0.2
+    dev: false
 
   /domelementtype/2.2.0:
     resolution: {integrity: sha512-DtBMo82pv1dFtUmHyr48beiuq792Sxohr+8Hm9zoxklYPfa6n0Z3Byjj2IV7bmr2IyqClnqEQhfgHJJ5QF0R5A==}
@@ -5551,6 +5559,10 @@ packages:
     resolution: {integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=}
     dev: true
 
+  /ssr-window/4.0.2:
+    resolution: {integrity: sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==}
+    dev: false
+
   /statuses/1.5.0:
     resolution: {integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=}
     engines: {node: '>= 0.6'}
@@ -5678,6 +5690,15 @@ packages:
     dependencies:
       has-flag: 4.0.0
     dev: true
+
+  /swiper/7.4.1:
+    resolution: {integrity: sha512-dhbL4tpYFvHug1J7GnKElfTi6EYhlZy/vNZRhHkWFyUsWZ1Vovipxj3la5gqllMogygXJMe3zvVv+f6eppvWiA==}
+    engines: {node: '>= 4.7.0'}
+    requiresBuild: true
+    dependencies:
+      dom7: 4.0.2
+      ssr-window: 4.0.2
+    dev: false
 
   /symbol-tree/3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}

@@ -66,8 +66,12 @@
     {
         "path": "typescript-vue",
         "name": "how to use TypeScript in Vue"
+    },
+    {
+        "path": "swiper-carousel",
+        "name": "use SwiperJs to make swipe carousel"
     }
-    
+
 
 
 ]

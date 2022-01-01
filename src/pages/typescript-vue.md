@@ -63,7 +63,7 @@ or use together mixing with `type`
 ```typescript
 type moodType = 'happy' | 'energetic'
 
-interface {
+interface Music {
     year: number
     mood: moodType 👈 // 'happy' or 'energetic'
     genres: string[]
