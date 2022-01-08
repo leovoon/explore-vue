@@ -70,6 +70,10 @@
     {
         "path": "swiper-carousel",
         "name": "use SwiperJs to make swipe carousel"
+    },
+    {
+        "path": "parallax-effect",
+        "name": "easy parallax effect - useParallax"
     }
 
 
