@@ -35,13 +35,15 @@ const { t } = useI18n()
         </router-link>
       </li>
     </ul>
-    <ul class="list-none text-left pl-2 space-y-1.2 sm:text-center">
-      <span class="pl-2">
+    <ul class="list-none text-left pl-2 space-y-1.2 sm:text-center sm:(grid place-items-center)">
+      <span class="pl-2 sm:mb-4">
         #frontend practice
       </span>
-      <list-link v-for="{name, path} in lists" :key="name" :path="`/${path}`">
-        {{ name }}
-      </list-link>
+      <div class="sm:(flex gap-[1rem] max-w-4xl flex-wrap text-lg)">
+        <list-link v-for="{name, path} in lists" :key="name" :path="`/${path}`">
+          {{ name }}
+        </list-link>
+      </div>
     </ul>
   </div>
 </template>

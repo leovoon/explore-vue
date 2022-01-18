@@ -25,6 +25,7 @@ declare module 'vue' {
     Carousel: typeof import('./src/components/Carousel.vue')['default']
     CommentSortByKey: typeof import('./src/components/CommentSortByKey.vue')['default']
     DataSender: typeof import('./src/components/DataSender.vue')['default']
+    DatesDemo: typeof import('./src/components/DatesDemo.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     LazyLoadDemo: typeof import('./src/components/LazyLoadDemo.vue')['default']
     ListLink: typeof import('./src/components/ListLink.vue')['default']

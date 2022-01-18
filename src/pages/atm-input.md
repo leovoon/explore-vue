@@ -6,8 +6,9 @@ title: ATM Like Input
   <!-- You can use Vue components inside markdown -->
   <carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
   <h3>ATM Like Input</h3>
-
 </div>
+
+ui inspired by tng.
 
 <tng-input/>
 

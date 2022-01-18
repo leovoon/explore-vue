@@ -1,5 +1,6 @@
 ---
 title: Parallax effect card
+description: Create parallax effect with useParallax
 ---
 
 <div class="text-center">

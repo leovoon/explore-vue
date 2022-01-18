@@ -24,7 +24,7 @@
         "name": "reusable components using vue slot"
     },
     {
-        "path": "youtube-vote-button"  ,
+        "path": "youtube-vote-button",
         "name": "the making of progressbar button component"
     },
     {
@@ -74,8 +74,9 @@
     {
         "path": "parallax-effect",
         "name": "easy parallax effect - useParallax"
+    },
+    {
+        "path": "dates-in-vue",
+        "name": "how to get dates in Vue"
     }
-
-
-
 ]
