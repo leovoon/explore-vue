@@ -27,6 +27,7 @@ declare module 'vue' {
     DataSender: typeof import('./src/components/DataSender.vue')['default']
     DatesDemo: typeof import('./src/components/DatesDemo.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
+    InfiniteScrollDemo: typeof import('./src/components/InfiniteScrollDemo.vue')['default']
     LazyLoadDemo: typeof import('./src/components/LazyLoadDemo.vue')['default']
     ListLink: typeof import('./src/components/ListLink.vue')['default']
     ParallaxEffectDemo: typeof import('./src/components/ParallaxEffectDemo.vue')['default']

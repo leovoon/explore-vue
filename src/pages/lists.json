@@ -49,7 +49,11 @@
     },
     {
         "path": "scroll-animate-intersection-observer",
-        "name": "sticky scrolling animation - useIntersectionObserver"
+        "name": "sticky scrolling animation - remix"
+    },
+    {
+        "path": "infinite-scroll",
+        "name": "infinite scrolling with intersection observer"
     },
     {
         "path": "search-by-object-properties-composable",
