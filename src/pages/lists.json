@@ -82,5 +82,9 @@
     {
         "path": "dates-in-vue",
         "name": "how to get dates in Vue"
+    },
+    {
+        "path": "motion-one-animation-library-vue",
+        "name": "how to use motion-one animation library in Vue"
     }
 ]

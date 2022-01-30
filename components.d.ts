@@ -35,6 +35,7 @@ declare module 'vue' {
     ProgressButtonDemo: typeof import('./src/components/ProgressButtonDemo.vue')['default']
     QrGenerator: typeof import('./src/components/QrGenerator.vue')['default']
     QrGeneratorDemo: typeof import('./src/components/QrGeneratorDemo.vue')['default']
+    RedPacketDemo: typeof import('./src/components/RedPacketDemo.vue')['default']
     ScrollAnimate: typeof import('./src/components/ScrollAnimate.vue')['default']
     SearchListByQuery: typeof import('./src/components/SearchListByQuery.vue')['default']
     SwipeButton: typeof import('./src/components/SwipeButton.vue')['default']
