@@ -39,9 +39,6 @@ const motionInstance = useMotion(target, {
   },
 })
 
-// initial state on mount
-onMounted(() => opened.value === false)
-
 const motionInstance2 = useMotion(sparkle, {
   initial: {
     opacity: 0,
@@ -67,6 +64,9 @@ const closeRedPacket = () => {
   motionInstance.apply('initial')
   motionInstance2.apply('initial')
 }
+
+// close packet on initial mount
+onMounted(() => closeRedPacket())
 
 const toggle = () => {
   opened.value = !opened.value
