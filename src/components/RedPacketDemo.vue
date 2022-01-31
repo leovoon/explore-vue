@@ -1,5 +1,5 @@
 <template>
-  <div class="packet max-w-[260px] w-250px max-h-[300px] h-40vh">
+  <div class="packet mt-2 max-w-[260px] w-250px max-h-[300px] h-40vh">
     <div
       ref="target"
       class="opener z-0"
@@ -38,6 +38,9 @@ const motionInstance = useMotion(target, {
     rotateX: 180,
   },
 })
+
+// initial state on mount
+onMounted(() => opened.value === false)
 
 const motionInstance2 = useMotion(sparkle, {
   initial: {

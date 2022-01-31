@@ -14,7 +14,7 @@ description: Use vueuse motion to animate components
 <red-packet-demo/>
 
 source code at [red-packet-demo.vue](https://github.com/leovoon/explore-vue/blob/main/src/components/RedPacketDemo.vue)
-
+  
 
 ## Install the package
 ```bash
