@@ -34,7 +34,7 @@ app.mount('#app')
 ```
 
 
-Check out their docs at  [@vueuse/motion](https://motion.dev/vue/quick-start) for more info. Another great library is [motion-one](https://motion.dev/guides/quick-start).
+Check out their docs at  [@vueuse/motion](https://motion.vueuse.org/) for more info. Another great library is [motion-one](https://motion.dev/guides/quick-start). If you like Tailwind for animations, checkout [AnimXYZ](https://animxyz.com/)
 
 
 Happy lunar new year!
